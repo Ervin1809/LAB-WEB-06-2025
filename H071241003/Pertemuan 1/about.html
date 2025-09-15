@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Akhmad Hidayat</title>
+  <meta name="description" content="Tentang Akhmad Hidayat — profil, pendidikan, keterampilan, hobi & minat." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Arunika<span>.dev</span></a>
+      <nav aria-label="Navigasi utama">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- PERSONAL INFO (TABLE) -->
+    <section class="container">
+      <h1>Tentang Saya</h1>
+      <h2>Informasi Personal</h2>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr><td>Nama Lengkap</td><td>Akhmad Hidayat</td></tr>
+            <tr><td>NIM</td><td>H071241003</td></tr>
+            <tr><td>Program Studi</td><td>Sistem Informasi</td></tr>
+            <tr><td>Universitas</td><td>Universitas Hasanuddin</td></tr>
+            <tr><td>Email</td><td>yaynature01@gmail.com</td></tr>
+            <tr><td>Tempat, Tanggal Lahir</td><td>Tinambung, 31 Januari 2006</td></tr>
+            <tr><td>Alamat</td><td>Makassar, Sulawesi Selatan</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- BIO (3 paragraf, gunakan <strong> dan <em>) -->
+    <section class="container">
+      <h2>Bio</h2>
+      <p><strong>Saya adalah mahasiswa Sistem Informasi</strong> yang tertarik pada <em>data analytics</em>, machine learning, dan pengembangan produk digital yang berdampak sosial. Saya aktif di dunia kreatif sebagai videografer & editor, serta membangun sistem dan aplikasi sederhana untuk memecahkan masalah sehari-hari.</p>
+      <p>Sejak 2021 saya berkarya di industri kreatif, melayani puluhan klien dan memproduksi beragam konten. Di kampus, saya terlibat pada kegiatan pembelajaran dan komunitas teknologi, sekaligus terus mengasah kemampuan <em>problem solving</em> lewat proyek OOP dan data.</p>
+      <p>Visi saya adalah menggabungkan <strong>teknologi, kreativitas, dan empati</strong> untuk menghasilkan solusi yang efisien sekaligus manusiawi—mulai dari platform mentoring, sistem informasi sederhana, hingga karya dokumenter yang mengangkat isu lingkungan dan pendidikan.</p>
+    </section>
+
+    <!-- EDUCATION (description list <dl>) -->
+    <section class="container">
+      <h2>Pendidikan</h2>
+      <dl class="timeline">
+        <dt>2024 — sekarang</dt>
+        <dd>Universitas Hasanuddin — Sistem Informasi (FMIPA)</dd>
+        <dt>2021 — 2024</dt>
+        <dd>SMA Negeri 1 Majene</dd>
+      </dl>
+    </section>
+
+    <!-- SKILLS (ul) -->
+    <section class="container">
+      <h2>Keterampilan</h2>
+      <ul class="skills">
+        <li>Photography & Videography (Advanced)</li>
+        <li>Object Oriented Programming (Advanced)</li>
+        <li>Data Analytics & Machine Learning (Intermediate)</li>
+        <li>Desain Grafis (Adobe, Corel, Canva, Figma)</li>
+      </ul>
+    </section>
+
+    <!-- HOBBIES (ol) -->
+    <section class="container">
+      <h2>Hobi & Minat</h2>
+      <ol class="hobbies">
+        <li>Fotografi & film dokumenter</li>
+        <li>Belajar algoritma & ngoprek proyek OOP</li>
+        <li>Kegiatan komunitas teknologi & edukasi</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Akhmad Hidayat. All rights reserved.</p>
+      <ul class="social">
+        <li><a href="mailto:yaynature01@gmail.com" target="_blank" rel="noopener">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/akhmad-hidayat/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/arunikadev" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
