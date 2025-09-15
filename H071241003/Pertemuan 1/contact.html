@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Akhmad Hidayat</title>
+  <meta name="description" content="Kontak Akhmad Hidayat — tabel kontak dan form kirim pesan." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Arunika<span>.dev</span></a>
+      <nav aria-label="Navigasi utama">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- CONTACT INFO (TABLE) -->
+    <section class="container">
+      <h1>Kontak</h1>
+      <h2>Informasi Kontak</h2>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr><td>Email</td><td><a href="mailto:yaynature01@gmail.com">yaynature01@gmail.com</a></td></tr>
+            <tr><td>Nomor Telepon</td><td><a href="wa.me/6281244724703" target="_blank" rel="noopener">Whatsapp</a></td></tr>
+            <tr><td>LinkedIn</td><td><a href="https://www.linkedin.com/in/akhmad-hidayat/" target="_blank" rel="noopener">Akhmad Hidayat</a></td></tr>
+            <tr><td>Instagram</td><td><a href="instagram.com/yayath.031" aria-disabled="true">@yayath.031</a></td></tr>
+            <tr><td>GitHub</td><td><a href="https://github.com/arunikadev" target="_blank" rel="noopener">Arunika.dev</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM (lengkap + label + required) -->
+    <section class="container">
+      <h2>Kirim Pesan</h2>
+      <form class="contact-form" action="#" method="post">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input id="nama" name="nama" type="text" placeholder="Nama kamu" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="nama@email.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="telp">Nomor Telepon</label>
+          <input id="telp" name="telp" type="tel" placeholder="+62 ..." required />
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Tipe Pesan</legend>
+          <label><input type="radio" name="tipe" value="pertanyaan" required /> Pertanyaan</label>
+          <label><input type="radio" name="tipe" value="kritik" /> Kritik</label>
+          <label><input type="radio" name="tipe" value="saran" /> Saran</label>
+          <label><input type="radio" name="tipe" value="kerjasama" /> Kerjasama</label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="6" placeholder="Tulis pesanmu di sini..." required></textarea>
+        </div>
+
+        <div class="form-check">
+          <label>
+            <input type="checkbox" name="persetujuan" required />
+            Saya menyetujui pengolahan data ini untuk keperluan respon.
+          </label>
+        </div>
+
+        <button class="btn" type="submit">Kirim</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Akhmad Hidayat. All rights reserved.</p>
+      <ul class="social">
+        <li><a href="mailto:yaynature01@gmail.com" target="_blank" rel="noopener">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/akhmad-hidayat/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/arunikadev" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

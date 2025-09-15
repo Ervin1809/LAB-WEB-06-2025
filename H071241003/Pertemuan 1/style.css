@@ -1,0 +1,151 @@
+/* ==========
+   RESET & BASE
+   Mengatur dasar tipografi dan layout agar konsisten
+========== */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  line-height: 1.6;
+  color: #0f172a;              /* slate-900 */
+  background: #f8fafc;         /* slate-50 */
+}
+
+/* ==========
+   UTILITIES
+========== */
+.container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+  text-align: justify;
+}
+h1, h2, h3 { line-height: 1.25; margin: 0 0 .5rem; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.4rem; margin-top: 1.25rem; }
+p { margin: .5rem 0 1rem; }
+
+/* ==========
+   HEADER & NAV
+========== */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: #ffffffee;       /* semi-transparan */
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e2e8f0;
+}
+.nav-wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .8rem 0;
+}
+.brand {
+  font-weight: 800; font-size: 1.2rem; text-decoration: none; color: #111827;
+}
+.brand span { color: #2563eb; } /* titik biru */
+.nav { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+.nav a {
+  text-decoration: none; color: #334155; padding: .4rem .6rem; border-radius: .5rem;
+}
+.nav a:hover { background: #e2e8f0; }
+.nav a.active { background: #2563eb; color: #fff; }
+
+/* ==========
+   HERO
+========== */
+.hero {
+  display: grid; gap: 1.2rem; align-items: center;
+  grid-template-columns: 160px 1fr; padding: 1.6rem 0;
+}
+.hero-media img {
+  width: 160px; height: 160px; object-fit: cover;
+  border-radius: 999px; border: 4px solid #e2e8f0;
+  background: #cbd5e1;
+}
+.tagline { color: #475569; }
+.cta-group { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: .6rem; }
+
+/* Tombol reusable */
+.btn {
+  display: inline-block; border: 1px solid #2563eb; background: #2563eb;
+  color: #fff; padding: .55rem .9rem; border-radius: .6rem; text-decoration: none;
+  font-weight: 600;
+}
+.btn:hover { filter: brightness(0.95); }
+.btn.btn-secondary {
+  background: #ffffff; color: #2563eb; border-color: #2563eb;
+}
+
+/* ==========
+   TABLES
+========== */
+.table-wrap { overflow-x: auto; border: 1px solid #e2e8f0; border-radius: .6rem; background: #fff; }
+table { width: 100%; border-collapse: collapse; min-width: 520px; }
+thead th {
+  background: #f1f5f9; text-align: left; font-weight: 700; padding: .7rem .8rem; border-bottom: 1px solid #e2e8f0;
+}
+tbody td { padding: .7rem .8rem; border-bottom: 1px solid #e2e8f0; }
+tbody tr:last-child td { border-bottom: none; }
+
+/* ==========
+   CARDS (untuk sorotan di Home)
+========== */
+.cards {
+  list-style: none; margin: .6rem 0 0; padding: 0;
+  display: grid; gap: .8rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.card {
+  background: #fff; border: 1px solid #e2e8f0; border-radius: .8rem; padding: .9rem;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+}
+.card h3 { margin-bottom: .25rem; }
+
+/* ==========
+   TIMELINE (dl Education)
+========== */
+.timeline { border-left: 3px solid #2563eb; padding-left: .9rem; }
+.timeline dt {
+  font-weight: 700; color: #1f2937; margin-top: .6rem;
+}
+.timeline dd {
+  margin: 0 0 .5rem .2rem; color: #475569;
+}
+
+/* ==========
+   LISTS
+========== */
+.skills, .hobbies { padding-left: 1.1rem; }
+.skills li, .hobbies li { margin: .25rem 0; }
+
+/* ==========
+   FORMS
+========== */
+.contact-form { background: #fff; padding: 1rem; border: 1px solid #e2e8f0; border-radius: .8rem; }
+.form-group, .form-check { margin-bottom: .8rem; }
+label { display: block; font-weight: 600; margin-bottom: .3rem; }
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+  width: 100%; padding: .6rem .7rem; border: 1px solid #cbd5e1; border-radius: .5rem;
+  background: #f8fafc;
+}
+textarea { resize: vertical; }
+fieldset.form-group { border: 1px solid #e2e8f0; border-radius: .6rem; padding: .6rem .7rem; }
+legend { padding: 0 .3rem; font-weight: 700; }
+
+/* ==========
+   FOOTER
+========== */
+.site-footer { margin-top: 2rem; border-top: 1px solid #e2e8f0; background: #fff; }
+.footer-wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .9rem 0; gap: .8rem; flex-wrap: wrap;
+}
+.social { list-style: none; display: flex; gap: .8rem; margin: 0; padding: 0; }
+.social a { text-decoration: none; color: #2563eb; }
+
+/* ==========
+   RESPONSIVE
+========== */
+@media (max-width: 680px) {
+  .hero { grid-template-columns: 1fr; text-align: center; }
+  .hero-media img { margin: 0 auto; }
+  .footer-wrap { justify-content: center; }
+}
