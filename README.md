@@ -63,7 +63,7 @@
    Jika file yang ingin di add sudah berwarna hijau lanjut ke commit.
    Jika file yang ingin di add berwarna merah lakukan add terlebih dahulu
 
-   git commit -m "pesan mengenai penambahan atau perubahan apa yang anda lakukan"
+   git commit -m "Tugas Praktikum 1"
 
    ```
 
