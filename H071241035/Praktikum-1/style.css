@@ -1,0 +1,211 @@
+/* universal */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* heder */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+header .logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* Main Content */
+main {
+    padding: 20px 5%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 200px;
+    border-radius: 20%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid rgb(235, 188, 59);
+    box-shadow: 0 0 30px rgba(42, 43, 41, 0.5); 
+}
+
+.hero-section h1 {
+    margin: 10px 0;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+td a {
+    color: #333;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+    color: #2f9dcc;
+    transition: color 0.3s ease;
+}
+
+th {
+    background-color: #f2f2f2;
+    width: 30%;
+}
+
+/* Bio */
+.bio p {
+    text-align: justify;
+}
+
+dl dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dl dd {
+    margin-left: 20px;
+}
+
+/* Skills & Hobbies List */
+ul, ol {
+    padding-left: 20px;
+}
+
+/* form kontak */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 97.5%;
+    padding: 10px;
+    border: 2px solid #222222;
+    border-radius: 8px;
+    box-sizing: border; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: vertical;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: white;
+    box-shadow: 0 0 0 3px rgba(38, 241, 255, 0.5);
+}
+
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* tipsan */
+.Tipe-Pesan {
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    margin-top: 5px;
+}
+
+.Tipe-Pesan div {
+    margin-right: 20px; 
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #68d2ff;
+    color: black;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease;    
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 5%;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 20px;
+}
