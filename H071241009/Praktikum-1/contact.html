@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahesa Putri Lukman - Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">MyPortofolio</a> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li> 
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <section class="contact-info">
+        <h2>Informasi Kontak</h2>
+        <table>
+            <tr><td>Email</td><td>mahesaputrilukman28@gmail.com</td></tr>
+            <tr><td>Nomor Telepon</td><td>+6285299606256</td></tr>
+            <tr><td>LinkedIn</td><td>Mahesa Putri Lukman</td></tr>
+            <tr><td>Instagram</td><td>@mahesaputrilukman28</td></tr>
+            <tr><td>GitHub</td><td>MahesaPutriLukman</td></tr>
+        </table>
+    </section>
+
+    <section class="contact-form">
+        <h2>Hubungi Saya</h2>
+        <form action="#" method="post">
+            <div>
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="telepon">Nomor Telepon:</label>
+                <input type="tel" id="telepon" name="telepon" required>
+            </div>
+            <fieldset>
+                <legend>Tipe Pesan:</legend>
+                <div class="radio-options">
+                    <input type="radio" id="tanya" name="tipe_pesan" value="Pertanyaan" required>
+                    <label for="tanya">Pertanyaan</label>
+                    
+                    <input type="radio" id="kritik" name="tipe_pesan" value="Kritik">
+                    <label for="kritik">Kritik</label>
+                    
+                    <input type="radio" id="saran" name="tipe_pesan" value="Saran">
+                    <label for="saran">Saran</label>
+                    
+                    <input type="radio" id="kerjasama" name="tipe_pesan" value="Kerjasama">
+                    <label for="kerjasama">Kerjasama</label>
+                </div>
+            </fieldset>
+            <div>
+                <label for="pesan">Pesan Detail:</label>
+                <textarea id="pesan" name="pesan" rows="5" required></textarea>
+            </div>
+            <div>
+                <input type="checkbox" id="setuju" name="setuju" required>
+                <label for="setuju">Saya setuju data saya diproses.</label>
+            </div>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </section>
+</main>
+
+    <footer>
+        <p>&copy; 2025 Mahesa Putri Lukman. Hak Cipta Dilindungi.</p>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/mahesa-putri-lukman-64a982228/">LinkedIn</a>
+            <a href="https://www.instagram.com/mahesaputrilukman28?igsh=cTk5NjY4ZzN6emw3">Instagram</a>
+            <a href="https://github.com/MahesaPutriLukman">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+</html>
