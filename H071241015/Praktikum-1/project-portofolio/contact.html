@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">NMCW</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="active"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="contact-page">
+        <section class="contact-section">
+            <h2>Hubungi Saya</h2>
+
+            <h3>Contact Information</h3>
+            <table>
+                <tr><td>Email</td><td>waldinmc24h@student.unhas.ac.id</td></tr>
+                <tr><td>Nomor Telepon</td><td>+62 822 9043 9146 </td></tr>
+                <tr><td>LinkedIn</td><td>linkedin.com/in/nurulmarisa-clarawaldi</td></tr>
+                <tr><td>Instagram</td><td>@nurulmarisaa</td></tr>
+                <tr><td>GitHub</td><td>github.com/nurulmarisa8</td></tr>
+            </table>
+
+            <h3>Contact Form</h3>
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap:</label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Nomor Telepon:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Contoh: 081234567890" required>
+                </div>
+                <div class="form-group">
+                    <label>Tipe Pesan:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="pertanyaan" name="tipe_pesan" value="Pertanyaan" required> <label for="pertanyaan">Pertanyaan</label>
+                        <input type="radio" id="kritik" name="tipe_pesan" value="Kritik"> <label for="kritik">Kritik</label>
+                        <input type="radio" id="saran" name="tipe_pesan" value="Saran"> <label for="saran">Saran</label>
+                        <input type="radio" id="kerjasama" name="tipe_pesan" value="Kerjasama"> <label for="kerjasama">Kerjasama</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan Detail:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                </div>
+                <div class="form-group-checkbox">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">Saya setuju data yang saya kirimkan akan digunakan sesuai kebijakan privasi.</label>
+                </div>
+                <button type="submit" class="submit-btn">Kirim Pesan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Nurul Marisa Clara Waldi. All Rights Reserved.</p>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/nurulmarisa-clarawaldi-8290842b2/">LinkedIn</a>
+            <a href="https://www.instagram.com/nurulmarisaa/">Instagram</a>
+            <a href="https://github.com/nurulmarisa8">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>
