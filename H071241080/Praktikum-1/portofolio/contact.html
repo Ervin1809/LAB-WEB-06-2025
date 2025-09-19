@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2>Portfolio</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Info -->
+  <section>
+    <h2>Informasi Kontak</h2>
+    <table>
+      <tr><td>Email</td><td>hanifah@gmail.com</td></tr>
+      <tr><td>Telepon</td><td>08123456789</td></tr>
+      <tr><td>Instagram</td><td>@hanifah</td></tr>
+      <tr><td>LinkedIn</td><td><a href="https://linkedin.com/in/nama" target="_blank">Profil LinkedIn</a></td></tr>
+      <tr><td>GitHub</td><td><a href="https://github.com/nama" target="_blank">Profil GitHub</a></td></tr>
+    </table>
+  </section>
+
+  <!-- Contact Form -->
+  <section>
+    <h2>Form Kontak</h2>
+    <form>
+      <label>Nama:
+        <input type="text" required>
+      </label>
+
+      <label>Email:
+        <input type="email" required>
+      </label>
+
+      <label>Telepon:
+        <input type="tel" required>
+      </label>
+
+      <p>Tipe Pesan:</p>
+      <label class="inline"><input type="radio" name="tipe" required> Pertanyaan</label>
+      <label class="inline"><input type="radio" name="tipe"> Kritik</label>
+      <label class="inline"><input type="radio" name="tipe"> Saran</label>
+      <label class="inline"><input type="radio" name="tipe"> Kerjasama</label>
+
+      <label>Pesan:
+        <textarea rows="5" required></textarea>
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" required> Saya menyetujui pengolahan data
+      </label>
+
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Portfolio | <a href="#">Instagram</a> | <a href="#">LinkedIn</a></p>
+  </footer>
+</body>
+</html>
