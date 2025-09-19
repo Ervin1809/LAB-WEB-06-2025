@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Diesty's Portofolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contact Information -->
+         <h2 class="section-title">Informasi Kontak</h2>
+         <table class="center-table" border="1">
+            <tr>
+                <th>Email</th>
+                <td>diestymendila@gmail.com</td>
+            </tr>
+            <tr>
+                <th>Nomor Telepon</th>
+                <td>082199887766</td>
+            </tr>
+            <tr>
+                <th>LinkedIn</th>
+                <td><a href="https://www.linkedin.com/in/diestymendila/">linkedin.com/in/diestymendila</a></td>
+            </tr>
+            <tr>
+                <th>Instagram</th>
+                <td><a href="https://www.instagram.com/diestymendila/">@diestymendila</a></td>
+            </tr>
+            <tr>
+                <th>Github</th>
+                <td><a href="https://www.github.com/diestymendila">github.com/diestymendila</a></td>
+            </tr>
+         </table>
+
+         <!-- Contact Form -->
+          <section>
+            <h2>Form Kontak</h2>
+            <form>
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="tel">Nomor Telepon:</label>
+                <textarea id="tel" name="tel" required></textarea>
+
+                <p>Tipe Pesan:</p>
+                <label><input type="radio" name="tipe" value="pertanyaan" required>Pertanyaan</label>
+                <label><input type="radio" name="tipe" value="kritik" required>Kritik</label>
+                <label><input type="radio" name="tipe" value="saran" required>Saran</label>
+                <label><input type="radio" name="tipe" value="kerjasama" required>Kerjasama</label>
+
+                <label for="pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan" rows="5" required></textarea>
+
+                <label><input type="checkbox" required> Saya setuju data saya digunakan untuk keperluan kontak</label>
+                
+                <button type="submit">Kirim</button>
+            </form>
+          </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Diesty Mendila Tappo. All rights reserved | Follow me on
+            <a href="https://www.instagram.com/diestymendila/">Instagram</a> and
+            <a href="https://www.github.com/diestymendila">GitHub</a>
+        </p>
+    </footer>
+</body>
+</html>
