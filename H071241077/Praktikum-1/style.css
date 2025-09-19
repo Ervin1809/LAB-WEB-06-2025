@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8f6fc;
+  color: #2c2c54;
+  padding-top: 80px;
+}
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+  color: #fff;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffeaa7;
+  transform: scale(1.05);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #a29bfe;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ===== Section umum (card) ===== */
+main section {
+  padding: 30px;
+  margin: 25px auto;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(108,92,231,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(108,92,231,0.25);
+}
+
+main h2 {
+  color: #6c5ce7;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #a29bfe;
+  display: inline-block;
+  padding-bottom: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.section-title {
+  text-align: center;
+  display: block;
+  border-bottom: 3px solid #a29bfe;
+  padding-bottom: 5px;
+}
+
+/* ===== Table ===== */
+table {
+  width: 900px;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th, table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 15px;
+}
+
+table th {
+  background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+  color: #fff;
+}
+
+table tr:nth-child(even) td {
+  background: #f3f0fb;
+}
+
+/* ===== Table Center ===== */
+.center-table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+/* ===== Quick Stats Table ===== */
+.quick-stats-table {
+  width: 100%;
+  margin: 15px 0; 
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ===== List ===== */
+ul, ol {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+li {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+/* ===== Form ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+input, textarea, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #6c5ce7;
+  outline: none;
+  box-shadow: 0 0 6px rgba(162,155,254,0.5);
+}
+
+button {
+  background: #6c5ce7;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #a29bfe;
+  transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+  color: #fff;
+  text-align: center;
+  padding: 18px;
+  margin-top: 40px;
+  font-size: 14px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+footer a {
+  color: #ffeaa7;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 14px 20px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  main section {
+    padding: 20px;
+  }
+
+  table, .center-table {
+    width: 100%;
+  }
+}
+
