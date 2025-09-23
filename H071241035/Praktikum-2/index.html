@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senandyka Caffé</title>
+    
+    <link rel="icon" href="logo.png" type="image/png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-stone-100 text-stone-800">
+
+    <nav class="bg-white/80 backdrop-blur-sm fixed w-full z-10 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <img src="Aset/logo.png" alt="Logo Senandyka Caffé" class="h-20 w-auto"> </a>
+
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#hero" class="hover:text-amber-900 py-2 transition-colors">Beranda</a>
+                <a href="#about" class="hover:text-amber-900 py-2 transition-colors">Tentang Kami</a>
+                <a href="#features" class="hover:text-amber-900 py-2 transition-colors">Features</a>
+                <a href="#menu" class="hover:text-amber-900 py-2 transition-colors">Menu</a>
+                <a href="#contact" class="text-white bg-orange-500 p-2  rounded-lg hover:bg-orange-600 transition-colors ">Jadi Member</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="relative bg-cover bg-center pt-48 pb-32 bg-[url('https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=2070&auto=format&fit=crop')]">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-6 text-center relative z-5">
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">Secangkir Kopi, Sebuah Memori, Senandyka</h1>
+            <p class="text-lg md:text-xl text-stone-200 mb-8">Jadilah bagian dari keluarga kami dan nikmati promo eksklusif.</p>
+            <a href="#contact" class="bg-orange-500  text-white font-bold py-3 px-8 rounded-full hover:bg-orange-600 transition-colors duration-300">
+                Gabung Sekarang
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6  grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4 text-amber-900 ">Cerita di Balik Senandyka</h2>
+                    <p class="text-stone-600 text-justify  hover:text-orange-500 transition-colors ">
+                        Senandyka Caffé lahir dari kecintaan pada kopi dan keinginan untuk menciptakan ruang di mana setiap orang bisa berhenti sejenak dari kesibukan. Kami menyajikan kopi dari biji pilihan Dari <strong>Robusta Jawa</strong> Hingga <strong>Arabica Brazil</strong>, diseduh dengan penuh cinta oleh barista berpengalaman kami. Senandyka sendiri memiliki kepanjangan yaitu <strong><em>"Seruput Kenangan Dalvyn & Keluarga"</em></strong>
+                    </p>
+                </div>
+                <div>
+                    <video class="max-w-sm mx-auto rounded-xl shadow-2xl hover:-translate-y-3 hover:scale-105 transition-transform duration-300" autoplay muted loop>
+                        <source src="Aset/VID.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung tag video.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-amber-900">Kenapa Memilih Kami?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg text-center shadow-lg transform hover:shadow-orange-600 hover:-translate-y-2 transition-transform">
+                        <h3 class="text-xl font-bold mb-3 text-orange-500">Biji Kopi Terbaik</h3>
+                        <p class="text-stone-600">Kami bekerja sama langsung dengan petani lokal untuk mendapatkan biji kopi kualitas tertinggi dari seluruh Indonesia.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg text-center shadow-lg transform hover:shadow-orange-600 hover:-translate-y-2 transition-transform">
+                        <h3 class="text-xl font-bold mb-3 text-orange-500">Suasana Nyaman</h3>
+                        <p class="text-stone-600">Desain interior kami yang hangat dan playlist musik yang menenangkan adalah tempat sempurna untuk bekerja atau bersantai.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg text-center shadow-lg transform hover:shadow-orange-600 hover:-translate-y-2 transition-transform">
+                        <h3 class="text-xl font-bold mb-3 text-orange-500">Makanan Lezat</h3>
+                        <p class="text-stone-600">Selain kopi, nikmati juga aneka pastry dan makanan ringan yang kami buat setiap hari dengan bahan-bahan segar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-amber-900">Menu Kami</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+                    <div class="bg-white p-8 rounded-lg text-center shadow-lg border-4 border-green-600 transform hover:scale-125 hover:z-20 hover:shadow-green-400 hover:-translate-y-2 transition-transform duration-300">
+                        <img src="Aset/MENU/Stevia.png" alt="Stevia" class="w-full object-cover rounded-lg">
+                    </div>
+                    <div class="bg-white p-2 rounded-lg text-center shadow-lg border-4 border-blue-900 transform scale-110 mb-20 hover:scale-125 hover:z-20 hover:shadow-blue-600  hover:-translate-y-2 transition-transform duration-300">
+                        <p class="mt-1 font-extrabold text-lg text-orange-500 animate-pulse">BEST SELLER</p>
+                        <img src="Aset/MENU/Aren.png" alt="Aren" class="w-full object-cover rounded-lg">
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-4 border-amber-950 transform hover:scale-125 hover:z-20 hover:shadow-amber-700 hover:-translate-y-2 transition-transform duration-300">
+                        <img src="Aset/MENU/Tiramisu.png" alt="Tiramisu" class="w-full object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-20 bg-amber-800 text-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Kata Pelanggan Setia</h2>
+                <div class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+                    <div class="bg-amber-700 p-6 rounded-lg text-center flex-1 hover:-translate-y-3 hover:drop-shadow-lg transition-transform duration-300">
+                        <p class="text-stone-200 italic mb-4">"Sebagai Pendekar Kopi, Kopi Gayo-nya juara! Tempatnya juga cozy banget buat mengkader. Pasti kembalika lagi!, TUNGGUA!!!"</p>
+                        <p class="font-bold">- Karca, Mahasiswa</p>
+                    </div>
+                    <div class="bg-amber-700 p-6 rounded-lg text-center flex-1 hover:-translate-y-3 hover:drop-shadow-lg transition-transform duration-300">
+                        <p class="text-stone-200 italic mb-4">"Tempat meeting favorit sama klien. Wifi kencang, kopi enak, pelayanannya ramah."</p>
+                        <p class="font-bold">- Dimsun, Freelancer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-amber-900">Gabung Membership Senandyka</h2>
+                    <p class="text-stone-600 mt-2 mb-8 max-w-2xl mx-auto">Daftarkan dirimu sekarang untuk mendapatkan diskon 15% pada kunjungan pertamamu dan info promo menarik setiap minggunya!</p>
+                </div>
+                <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+                    <form onsubmit="sendWa(event)">
+                        <div class="mb-4">
+                            <label for="name" class="block text-stone-600 mb-2">Nama Lengkap</label>
+                            <input type="text" id="name" placeholder="Contoh: Memet Sanjaya" class="w-full bg-stone-50 border border-stone-300 rounded-md py-2 px-3 focus:outline-none focus:border-orange-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-stone-600 mb-2">Alamat Email</label>
+                            <input type="email" id="email" placeholder="kamu@email.com" class="w-full bg-stone-50 border border-stone-300 rounded-md py-2 px-3 focus:outline-none focus:border-orange-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="phone" class="block text-stone-600 mb-2">Nomor WhatsApp</label>
+                            <input type="tel" id="phone" placeholder="081234567890" class="w-full bg-stone-50 border border-stone-300 rounded-md py-2 px-3 focus:outline-none focus:border-orange-500">
+                        </div>
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-md transition-colors">
+                            Daftar Sekarang
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-amber-900 py-8">
+        <div class="container mx-auto px-6 text-center text-stone-300">
+            <div class="mb-4">
+                <a href="#" class="mx-2 hover:text-white ">Facebook</a>
+                <a href="#" class="mx-2 hover:text-white">Twitter</a>
+                <a href="https://www.instagram.com/senandycaffe/" target="_blank" class="mx-2 hover:text-white">Instagram</a>
+            </div>
+            <p>&copy; 2025 Senandyka Caffé. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</html>
