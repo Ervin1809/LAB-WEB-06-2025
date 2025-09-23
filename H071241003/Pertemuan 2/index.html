@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NovaCamp — Belajar Skill Digital Praktis</title>
+  <meta name="description" content="Landing page responsif berbasis Tailwind CSS untuk event/workshop NovaCamp." />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased text-slate-800">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-2 font-extrabold text-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3l6.928 4v10L12 21l-6.928-4V7z"/></svg>
+          NovaCamp
+        </a>
+        <!-- Mobile menu toggle -->
+        <input id="nav-toggle" type="checkbox" class="peer hidden" aria-label="toggle menu" />
+        <label for="nav-toggle" class="lg:hidden cursor-pointer p-2 rounded hover:bg-slate-100" aria-controls="nav" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </label>
+        <nav id="nav" class="absolute peer-checked:block hidden lg:block right-4 top-16 lg:static lg:top-auto lg:right-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none rounded-lg lg:rounded-none p-4 lg:p-0">
+          <ul class="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-8 text-sm font-medium">
+            <li><a href="#home" class="hover:text-indigo-600">Beranda</a></li>
+            <li><a href="#tentang" class="hover:text-indigo-600">Tentang</a></li>
+            <li><a href="#fitur" class="hover:text-indigo-600">Fitur</a></li>
+            <li><a href="#testimoni" class="hover:text-indigo-600">Testimoni</a></li>
+            <li><a href="#kontak" class="hover:text-indigo-600">Kontak</a></li>
+            <li><a href="#daftar" class="inline-flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Daftar</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Header / Tagline -->
+  <section id="home" class="bg-gradient-to-b from-indigo-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-indigo-700 bg-indigo-100 px-3 py-1 rounded-full">Workshop • Bootcamp • Mentoring</span>
+          <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold leading-tight text-slate-900">Level-up Skill Digital dalam <span class="text-indigo-600">4 Minggu</span></h1>
+          <p class="mt-4 text-slate-600 text-lg">NovaCamp adalah program intensif untuk pemula hingga intermediate: UI/UX, Web Dev, Data Dasar. Materi ringkas, mentor responsif, proyek nyata.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#daftar" class="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 5a1 1 0 10-2 0v4H7a1 1 0 100 2h4v4a1 1 0 102 0v-4h4a1 1 0 100-2h-4V7z"/></svg>
+              Daftar Sekarang
+            </a>
+            <a href="#tentang" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold ring-1 ring-slate-300 hover:bg-slate-50">Pelajari Lebih Lanjut</a>
+          </div>
+          <ul class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600">
+            <li class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4 1.5 1.5L11 17 7.5 13.5 9 12z"/></svg>Sertifikat selesai</li>
+            <li class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4 1.5 1.5L11 17 7.5 13.5 9 12z"/></svg>Mentor 1:10</li>
+            <li class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4 1.5 1.5L11 17 7.5 13.5 9 12z"/></svg>Proyek portofolio</li>
+          </ul>
+        </div>
+        
+         <div class="relative">
+        <img src="https://avatars.githubusercontent.com/u/181680698?s=400&u=7403d35e50bae67311e1c334a0a3f677d7f8054f&v=4" 
+             alt="Ilustrasi belajar online" 
+             class="rounded-2xl shadow-2xl object-cover w-full h-auto" />
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="tentang" class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-3xl font-extrabold">Tentang NovaCamp</h2>
+          <p class="mt-4 text-slate-600">Kami membantu mahasiswa dan pemula membangun dasar skill digital secara terarah. Kurikulum singkat, fokus praktik, dan bimbingan mentor yang relevan industri.</p>
+          <div class="mt-6 grid grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl ring-1 ring-slate-200">
+              <p class="text-2xl font-extrabold">4 Minggu</p>
+              <p class="text-sm text-slate-500">Format intensif</p>
+            </div>
+            <div class="p-4 rounded-xl ring-1 ring-slate-200">
+              <p class="text-2xl font-extrabold">3 Track</p>
+              <p class="text-sm text-slate-500">UI/UX • Web • Data</p>
+            </div>
+          </div>
+        </div>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-4">
+            <div class="p-2 rounded-lg bg-indigo-100 text-indigo-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 13H7v-2h6V7l5 5-5 5v-4z"/></svg>
+            </div>
+            <div>
+              <p class="font-semibold">Belajar cepat, tetap nyantol</p>
+              <p class="text-sm text-slate-600">Setiap sesi punya tujuan jelas, latihan, dan ringkasan action item.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="p-2 rounded-lg bg-indigo-100 text-indigo-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 6l-8 4 8 4 8-4-8-4zm0 6l-8 4 8 4 8-4-8-4z"/></svg>
+            </div>
+            <div>
+              <p class="font-semibold">Materi proyek nyata</p>
+              <p class="text-sm text-slate-600">Bangun portofolio yang beneran bisa dipamerkan ke recruiter.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="p-2 rounded-lg bg-indigo-100 text-indigo-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2.5 7-7-4.5L5.5 20 8 13 2 9h7z"/></svg>
+            </div>
+            <div>
+              <p class="font-semibold">Mentoring dekat</p>
+              <p class="text-sm text-slate-600">Diskusi via grup dan klinik tugas mingguan.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fitur / Manfaat (grid usage) -->
+  <section id="fitur" class="py-16 sm:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl font-extrabold">Kenapa Gabung?</h2>
+        <p class="mt-3 text-slate-600">Tiga alasan simpel, tapi bikin beda.</p>
+      </div>
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-white ring-1 ring-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4 1.5 1.5L11 17 7.5 13.5 9 12z"/></svg>
+          </div>
+          <h3 class="font-semibold">Kurasi Materi</h3>
+          <p class="mt-1 text-sm text-slate-600">Tanpa rimba teori. Fokus yang dipakai di lapangan.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white ring-1 ring-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3 class="font-semibold">Jadwal Fleksibel</h3>
+          <p class="mt-1 text-sm text-slate-600">Live sore, rekaman tersedia. Tugas mingguan santun.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white ring-1 ring-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm3 7l-4 5-2-2"/></svg>
+          </div>
+          <h3 class="font-semibold">Career-friendly</h3>
+          <p class="mt-1 text-sm text-slate-600">Review portofolio dan simulasi interview di akhir program.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni (opsional) -->
+  <section id="testimoni" class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl font-extrabold">Kata Alumni</h2>
+        <p class="mt-3 text-slate-600">Beberapa kalimat kecil yang bikin semangat.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <figure class="p-6 rounded-2xl ring-1 ring-slate-200 bg-white">
+          <blockquote class="text-slate-700">“Materinya to the point, tugasnya relevan. Portofolio jadi beres.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— R, Mahasiswa SI</figcaption>
+        </figure>
+        <figure class="p-6 rounded-2xl ring-1 ring-slate-200 bg-white">
+          <blockquote class="text-slate-700">“Mentornya responsif. Dibantu debugging sampai paham.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— Z, Junior Dev</figcaption>
+        </figure>
+        <figure class="p-6 rounded-2xl ring-1 ring-slate-200 bg-white">
+          <blockquote class="text-slate-700">“Akhirnya punya proyek yang berani dipasang di CV.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— Y, Fresh Graduate</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Pendaftaran / Kontak -->
+  <section id="daftar" class="py-16 sm:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-3xl font-extrabold">Daftar Batch Terdekat</h2>
+          <p class="mt-3 text-slate-600">Form ini hanya tampilan. Kirim data saat demo tidak diperlukan.</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-600">
+            <li class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4 1.5 1.5L11 17 7.5 13.5 9 12z"/></svg>Kelas dimulai: 14 Oktober</li>
+            <li class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4 1.5 1.5L11 17 7.5 13.5 9 12z"/></svg>Format: Online, 8 sesi</li>
+            <li class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4 1.5 1.5L11 17 7.5 13.5 9 12z"/></svg>Bonus: Template CV + Checklist Portofolio</li>
+          </ul>
+        </div>
+        <form id="kontak" class="bg-white p-6 sm:p-8 rounded-2xl ring-1 ring-slate-200">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="nama" class="block text-sm font-medium text-slate-700">Nama</label>
+              <input id="nama" type="text" placeholder="Nama lengkap" class="mt-1 w-full px-3 py-2 rounded-lg ring-1 ring-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
+              <input id="email" type="email" placeholder="nama@email.com" class="mt-1 w-full px-3 py-2 rounded-lg ring-1 ring-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="track" class="block text-sm font-medium text-slate-700">Pilih Track</label>
+              <select id="track" class="mt-1 w-full px-3 py-2 rounded-lg ring-1 ring-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <option>UI/UX Dasar</option>
+                <option>Web Development</option>
+                <option>Data Dasar</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="pesan" class="block text-sm font-medium text-slate-700">Pesan</label>
+              <textarea id="pesan" rows="4" placeholder="Tulis pertanyaan atau harapan kamu..." class="mt-1 w-full px-3 py-2 rounded-lg ring-1 ring-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            </div>
+            <div class="sm:col-span-2 flex items-center gap-3">
+              <input id="tos" type="checkbox" class="w-4 h-4 rounded ring-1 ring-slate-300 text-indigo-600 focus:ring-indigo-500" />
+              <label for="tos" class="text-sm text-slate-600">Saya setuju dengan ketentuan</label>
+            </div>
+            <div class="sm:col-span-2">
+              <button type="button" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-xl">Kirim</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
+        <div>
+          <p class="font-extrabold text-lg">NovaCamp</p>
+          <p class="mt-2 text-slate-600">Belajar skill digital tanpa ribet.</p>
+        </div>
+        <div>
+          <p class="font-semibold">Navigasi</p>
+          <ul class="mt-2 space-y-2 text-slate-600">
+            <li><a href="#home" class="hover:text-indigo-600">Beranda</a></li>
+            <li><a href="#tentang" class="hover:text-indigo-600">Tentang</a></li>
+            <li><a href="#fitur" class="hover:text-indigo-600">Fitur</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold">Ikuti</p>
+          <ul class="mt-2 space-y-2 text-slate-600">
+            <li><a href="#" class="hover:text-indigo-600">Instagram</a></li>
+            <li><a href="#" class="hover:text-indigo-600">LinkedIn</a></li>
+            <li><a href="#" class="hover:text-indigo-600">YouTube</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold">Kontak</p>
+          <ul class="mt-2 space-y-2 text-slate-600">
+            <li>novacamp@gmail.com</li>
+            <li>Makassar</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t border-slate-200 text-xs text-slate-500">© 2025 NovaCamp. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
