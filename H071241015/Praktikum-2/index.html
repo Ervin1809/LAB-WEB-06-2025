@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting Go - Solusi Hosting Cepat dan Andal</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Hosting Go</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#beranda" class="text-gray-600 hover:text-red-500">Beranda</a>
+                <a href="#layanan" class="text-gray-600 hover:text-red-500">Layanan</a>
+                <a href="#tentang" class="text-gray-600 hover:text-red-500">Tentang</a>
+                <a href="#kontak" class="text-gray-600 hover:text-red-500">Kontak</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header id="beranda" class="bg-[url('hostinggo.png')] flex text-white text-center py-20 md:py-32">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Hosting Cepat dan Andal untuk Website Anda</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Wujudkan website impian Anda dengan performa server terbaik, keamanan terjamin, dan dukungan penuh 24/7.</p>
+            <div>
+                <a href="#kontak" class="bg-white text-red-600 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300">Mulai Sekarang</a>
+                <a href="#layanan" class="ml-4 border border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-red-600 transition duration-300">Pelajari Lebih Lanjut</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+
+        <section id="layanan" class="text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Keunggulan Layanan Kami</h2>
+            <p class="text-gray-600 mb-12">Alasan mengapa Anda harus memilih Hosting Go.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3  gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Performa Tinggi</h3>
+                    <p class="text-gray-600">Server dengan teknologi terkini untuk memastikan website Anda dapat diakses dengan kecepatan maksimal.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Keamanan Terjamin</h3>
+                    <p class="text-gray-600">Dilengkapi dengan SSL gratis dan proteksi malware untuk menjaga data website Anda tetap aman.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Dukungan Ahli 24/7</h3>
+                    <p class="text-gray-600">Tim kami siap membantu Anda kapan saja melalui live chat, email, atau telepon.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang" class="py-20 mt-16 bg-white rounded-lg shadow-md">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tentang Kami</h2>
+                <p class="text-gray-600">Hosting Go adalah penyedia layanan web hosting yang berkomitmen untuk memberikan solusi terbaik bagi individu, blogger, hingga bisnis. Kami percaya bahwa semua orang berhak memiliki website yang cepat, aman, dan andal tanpa harus mengeluarkan biaya mahal.</p>
+            </div>
+        </section>
+
+        <section id="testimoni" class="py-16 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12">Gacor by</h2>
+            <div class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+                <div class="bg-white p-8 rounded-lg shadow-md flex-1">
+                    <p class="text-gray-600 italic mb-4">"Pelayanannya sangat memuaskan! Website saya sekarang jauh lebih cepat dari sebelumnya."</p>
+                    <p class="font-bold text-gray-800">- Benjamin Šeško</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md flex-1">
+                    <p class="text-gray-600 italic mb-4">"Tim support-nya sangat responsif dan membantu saya menyelesaikan masalah dalam hitungan menit."</p>
+                    <p class="font-bold text-gray-800">- Viktor Gyökeres</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="py-16 bg-white rounded-lg shadow-md">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Dapatkan Penawaran Khusus</h2>
+                <p class="text-gray-600 mb-8">Hubungi kami untuk mendapatkan informasi lebih lanjut.</p>
+                <form class="text-left">
+                    <div class="mb-4">
+                        <label for="nama" class="block text-gray-700 font-bold mb-2">Nama Lengkap</label>
+                        <input type="text" id="nama" class="w-full px-4 py-2 border rounded-lg " placeholder="John Doe">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-bold mb-2">Alamat Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg " placeholder="anda@email.com">
+                    </div>
+                    <div class="mb-6">
+                        <label for="pesan" class="block text-gray-700 font-bold mb-2">Pesan Anda</label>
+                        <textarea id="pesan" rows="4" class="w-full px-4 py-2 border rounded-lg     " placeholder="Tulis pesan Anda di sini..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-red-600 text-white font-bold py-3 px-8 rounded-full hover:bg-red-700 transition duration-300">Kirim</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">email@hostinggo.com | +62 123-4567-890</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="hover:text-red-400">Facebook</a>
+                <a href="#" class="hover:text-red-400">Instagram</a>
+                <a href="#" class="hover:text-red-400">Twitter</a>
+            </div>
+            <p class="text-gray-400 text-sm">&copy; 2025 Hosting Go. Hak Cipta Dilindungi.</p>
+            <p class="text-gray-400 text-sm mt-1">
+                <a href="#" class="hover:underline">Kebijakan Privasi</a> | <a href="#" class="hover:underline">Syarat & Ketentuan</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
