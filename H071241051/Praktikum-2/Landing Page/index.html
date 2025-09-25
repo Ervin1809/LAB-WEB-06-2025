@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GambLink - Arena Bermain Terbaik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+    <nav class="bg-gray-900/70 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-wider">
+                Gamb<span class="text-purple-500">Link</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#beranda" class="hover:text-purple-400 transition duration-300">Beranda</a>
+                <a href="#tentang" class="hover:text-purple-400 transition duration-300">Cari Tahu</a>
+                <a href="#fitur" class="hover:text-purple-400 transition duration-300">Tentang</a>
+                <a href="#Main" class="hover:text-purple-400 transition duration-300">Bermain</a>
+            </div>
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <header id="beranda" class="bg-cover bg-center min-h-screen flex items-center justify-center pt-16 bg-[linear-gradient(rgba(17,24,39,0.8),rgba(17,24,39,0.8)),url('assets/gacor.png')]">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+                Selamat Datang di Arena Para Pemenang
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Platform utama untuk menjadi juara dalam permainan favoritmu.
+            </p>
+            <a href="#pendaftaran" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
+                Mulai Bermain Sekarang
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="tentang" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4 text-white">GambLink</h2>
+                <div class="w-24 h-1 bg-purple-500 mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-gray-400 leading-relaxed">
+                    GambLink adalah platform online yang didedikasikan bagi para Pemenang di seluruh dunia. Kami menyediakan arena digital untuk berbagai jenis permainan, mulai dari yang klasik hingga modern. Tujuan kami adalah mencetak para pemenang.
+                </p>
+            </div>
+        </section>
+
+        <section id="fitur" class="relative overflow-hidden min-h-screen py-20 flex items-center justify-center bg-gray-800">
+            <video autoplay muted loop playsinline class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto z-0 object-cover">
+                <source src="Assets/xqc.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+            <div class="absolute inset-0 bg-gray-900/70 z-10"></div>
+            
+            <div class="container mx-auto px-6 relative z-20">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">Mengapa GambLink</h2>
+                    <p class="text-gray-300 mt-2">beragam permainan untuk pengalaman bermain terbaik.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <div class="relative rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="Assets/permainan.jpeg" alt="Beragam Permainan" class="w-full h-[200px] object-cover">
+                        <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-gray-900/90 to-transparent">
+                            <h3 class="font-bold text-lg mb-2 text-white">Beragam Permainan</h3>
+                            <p class="text-gray-200 text-sm">Akses puluhan jenis permainan populer dari seluruh dunia dalam satu platform.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="Assets/winner.jpg" alt="Kemenangan Nyata" class="w-full h-[200px] object-cover">
+                        <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-gray-900/90 to-transparent">
+                            <h3 class="font-bold text-lg mb-2 text-white">Kemenangan Nyata</h3>
+                            <p class="text-gray-200 text-sm">Kemenangan yang nyata menunggumu, bukan settingan.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="Assets/imf.jpg" alt="Didanai IMF" class="w-full h-[200px] object-cover">
+                        <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-gray-900/90 to-transparent">
+                            <h3 class="font-bold text-lg mb-2 text-white">Didanai IMF</h3>
+                            <p class="text-gray-200 text-sm">Hadiah yang spektakuler karena kami di sponsori oleh IMF.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="Assets/WD gampang.jpg" alt="Kemudahan Withdraw" class="w-full h-[200px] object-cover">
+                        <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-gray-900/90 to-transparent">
+                            <h3 class="font-bold text-lg mb-2 text-white">Kemudahan Withdraw</h3>
+                            <p class="text-gray-200 text-sm">Bisa withdraw cepat tanpa biaya tambahan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimoni" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">Testimoni Para Pemain</h2>
+                    <p class="text-gray-400 mt-2">Apa yang mereka sukai dari GambLink.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <p class="text-gray-300 mb-4 italic">"Game nya seru wd nya gampang."</p>
+                        <div class="flex items-center">
+                            <img src="Assets/badru.jpg" alt="Badru" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <p class="font-bold text-white">Badru</p>
+                                <p class="text-sm text-purple-400">kepiting capit capit oee</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <p class="text-gray-300 mb-4 italic">"Padahal baru main udah wd 50jt aja, fix gacor"</p>
+                        <div class="flex items-center">
+                            <img src="Assets/Slebew.jpg" alt="Slebew" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <p class="font-bold text-white">Slebew</p>
+                                <p class="text-sm text-purple-400">Dagu miring</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pendaftaran" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="bg-gray-900 rounded-2xl p-10 max-w-3xl mx-auto text-center shadow-2xl">
+                    <h2 class="text-3xl font-bold text-white mb-3">Siap Bermain?</h2>
+                    <p class="text-gray-400 mb-8">Daftarkan nomor telepon Anda untuk mendapatkan link permainan dari admin kami</p>
+                    <form class="flex flex-col md:flex-row gap-4 justify-center">
+                        <input type="tel" placeholder="Masukkan nomor telepon Anda" class="w-full md:w-2/3 bg-gray-700 text-white px-4 py-3 rounded-md border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition">
+                        <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-md transition duration-300">
+                            Main Sekarang
+                        </button>
+                    </form>
+                    <p class="text-xs text-gray-500 mt-4">Kami tidak akan mengirim spam. Janji.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="kontak" class="bg-gray-900 border-t border-gray-800 pt-12 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between text-center md:text-left">
+                <div class="mb-8 md:mb-0">
+                    <h4 class="text-xl font-bold text-white">Gamb<span class="text-purple-500">Link</span></h4>
+                    <p class="text-gray-400 mt-2 max-w-xs">Arena digital untuk para pemenang.</p>
+                </div>
+                <div class="mb-8 md:mb-0">
+                    <h4 class="font-bold text-white mb-3">Tautan Cepat</h4>
+                    <ul class="flex flex-row space-x-4 justify-center md:justify-start">
+                        <li><a href="#tentang" class="text-gray-400 hover:text-purple-400">Tentang Kami</a></li>
+                        <li><a href="#fitur" class="text-gray-400 hover:text-purple-400">Cari Tahu</a></li>
+                        <li><a href="#pendaftaran" class="text-gray-400 hover:text-purple-400">Bermain</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-3">Ikuti Kami</h4>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-purple-400">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400">
+                           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.793 2.013 10.148 2 12.315 2zm-1.163 1.943c-1.044.04-1.684.21-2.213.42a3.024 3.024 0 00-1.13 1.13c-.21.529-.38 1.169-.42 2.213-.042 1.02-.054 1.353-.054 3.788 0 2.435.012 2.768.054 3.788.04 1.044.21 1.684.42 2.213a3.024 3.024 0 001.13 1.13c.529.21 1.169.38 2.213.42 1.02.042 1.353.054 3.788.054s2.768-.012 3.788-.054c1.044-.04 1.684-.21 2.213-.42a3.024 3.024 0 001.13-1.13c.21-.529.38-1.169.42-2.213.042-1.02.054-1.353.054-3.788s-.012-2.768-.054-3.788c-.04-1.044-.21-1.684-.42-2.213a3.024 3.024 0 00-1.13-1.13c-.529-.21-1.169-.38-2.213-.42-1.02-.042-1.353-.054-3.788-.054s-2.768.012-3.788.054zM12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 1.942a3.193 3.193 0 110 6.386 3.193 3.193 0 010-6.386zM16.848 7.21a1.21 1.21 0 100 2.42 1.21 1.21 0 000-2.42z" clip-rule="evenodd" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                &copy; <script>document.write(new Date().getFullYear())</script> GambLink. Semua Hak Cipta Dilindungi.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
