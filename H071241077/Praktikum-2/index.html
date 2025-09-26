@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibliotalks</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-serif">
+
+
+  <!-- Navbar -->
+<nav class="bg-black fixed w-full z-20 shadow-lg border-b border-yellow-500/50">
+  <div class="flex flex-wrap justify-between items-center py-4 px-4 sm:px-6 md:px-10 w-full">
+    
+    <!-- Logo / Brand -->
+    <h1 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wider text-yellow-500">
+      BIBLIOTALKS
+    </h1>
+
+    <!-- Menu -->
+    <ul class="flex flex-wrap gap-4 font-medium text-sm md:text-lg text-white mt-2 md:mt-0">
+      <li><a href="#hero" class="hover:text-yellow-500 transition">Beranda</a></li>
+      <li><a href="#tentang" class="hover:text-yellow-500 transition">Tentang</a></li>
+      <li><a href="#karakter" class="hover:text-yellow-500 transition">Karakter</a></li>
+      <li><a href="#rekomendasi" class="hover:text-yellow-500 transition">Rekomendasi</a></li>
+      <li><a href="#testimoni" class="hover:text-yellow-500 transition">Testimoni</a></li>
+      <li><a href="#pesan" class="hover:text-yellow-500 transition">Q&A</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center text-center px-6">
+  
+  <!-- Background -->
+  <div class="absolute inset-0">
+    <img src="assets/beranda.jpg" alt="Background Buku" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/70"></div>
+  </div>
+
+  <!-- Konten -->
+  <div class="relative z-10 max-w-3xl">
+    <h1 class="text-4xl md:text-6xl font-extrabold text-yellow-500 drop-shadow-lg mb-6">
+      Harry Potter and the Philosopher's Stone
+    </h1>
+    <p class="text-gray-200 text-lg md:text-xl mb-8 drop-shadow-md">
+      Buku ini membawa pembaca ke dalam dunia sihir yang misterius. 
+      Pengalaman pertama sang karakter utama di Hogwarts menghadirkan kisah yang penuh keajaiban dan petualangan.
+    </p>
+    <a href="#tentang" 
+       class="inline-block bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg shadow hover:bg-yellow-600 transition">
+      Jelajahi Halaman
+    </a>
+  </div>
+
+</section>
+
+
+  <!-- Tentang Buku -->
+<section id="tentang" class="py-20 bg-gray-950 px-6 md:px-20">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- Gambar -->
+    <div>
+      <img src="assets/Cover.jpg" 
+           alt="Tentang Buku" 
+           class="rounded-lg shadow-lg">
+    </div>
+
+    <!-- Konten -->
+    <div class="text-center md:text-left">
+      <h2 class="text-3xl font-bold text-yellow-500 mb-4">Tentang Buku</h2>
+      <p class="text-gray-300 mb-6 leading-relaxed">
+        Buku pertama dalam seri legendaris Harry Potter ini memperkenalkan kita pada perjalanan seorang anak yatim piatu, 
+        yang menemukan bahwa dirinya adalah seorang penyihir dan diterima di sekolah sihir Hogwarts. 
+        Di sana, ia mengalami petualangan pertama bersama teman-temannya sekaligus menghadapi ancaman dari kekuatan jahat yang terkait dengan Lord Voldemort. 
+        Dengan latar Hogwarts yang magis, kisah ini menghadirkan awal dari petualangan besar melawan kekuatan gelap yang mengubah hidup Harry untuk selamanya.
+      </p>
+      <a href="#karakter" class="bg-yellow-500 text-black font-semibold px-6 py-3 rounded shadow hover:bg-yellow-600 transition">
+        Lihat Lebih Banyak
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Pengenalan Karakter -->
+<section id="karakter" class="py-20 bg-gradient-to-b from-black via-gray-950 to-black px-4 sm:px-6 md:px-12 lg:px-20">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-yellow-500 text-center mb-12">Karakter/Pemeran</h2>
+
+    <!-- Grid Responsif -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 gap-y-10">
+      
+      <!-- Karakter 1 -->
+      <div class="bg-gray-900/90 rounded-lg shadow-lg p-6 flex flex-col items-center text-center 
+                  hover:scale-105 transition-transform duration-300 ease-in-out">
+        <img src="assets/Malfoy.jpg" 
+             alt="Draco Malfoy - Murid Slytherin"
+             class="w-full h-72 object-cover rounded-lg mb-4 border-2 border-yellow-500 shadow-md">
+        <h3 class="text-xl font-bold text-yellow-400 mb-2">Malfoy</h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Murid Slytherin yang angkuh dan sering bersaing dengan Harry. 
+          Walau terlihat sombong, ia juga terjebak dalam tekanan keluarganya.
+        </p>
+      </div>
+
+      <!-- Karakter 2 -->
+      <div class="bg-gray-900/90 rounded-lg shadow-lg p-6 flex flex-col items-center text-center 
+                  hover:scale-105 transition-transform duration-300 ease-in-out">
+        <img src="assets/Hermione.jpg" 
+             alt="Hermione Granger - Murid Gryffindor"
+             class="w-full h-64 object-cover rounded-lg mb-4 border-2 border-yellow-500 shadow-md">
+        <h3 class="text-xl font-bold text-yellow-400 mb-2">Hermione</h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Gadis cerdas dengan pengetahuan luas dan kecintaan pada buku. 
+          Kepintarannya sering menjadi kunci dalam memecahkan masalah di Hogwarts.
+        </p>
+      </div>
+
+      <!-- Karakter 3 -->
+      <div class="bg-gray-900/90 rounded-lg shadow-lg p-6 flex flex-col items-center text-center 
+                  hover:scale-105 transition-transform duration-300 ease-in-out">
+        <img src="assets/Harry.jpg" 
+             alt="Harry Potter - The Boy Who Lived"
+             class="w-full h-64 object-cover rounded-lg mb-4 border-2 border-yellow-500 shadow-md">
+        <h3 class="text-xl font-bold text-yellow-400 mb-2">Harry</h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Anak yatim piatu yang dijuluki “The Boy Who Lived”. 
+          Sang tokoh utama yang pemberani, penuh rasa ingin tahu, dan takdirnya terikat erat dengan Lord Voldemort.
+        </p>
+      </div>
+
+      <!-- Karakter 4 -->
+      <div class="bg-gray-900/90 rounded-lg shadow-lg p-6 flex flex-col items-center text-center 
+                  hover:scale-105 transition-transform duration-300 ease-in-out">
+        <img src="assets/Ron.jpg" 
+             alt="Ron Weasley - Sahabat Harry"
+             class="w-full h-64 object-cover rounded-lg mb-4 border-2 border-yellow-500 shadow-md">
+        <h3 class="text-xl font-bold text-yellow-400 mb-2">Ron</h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Sahabat setia Harry yang pemberani dan humoris. 
+          Walau sering gugup, ia selalu ada di sisi teman-temannya saat bahaya menghadang.
+        </p>
+      </div>
+
+      <!-- Karakter 5 -->
+      <div class="bg-gray-900/90 rounded-lg shadow-lg p-6 flex flex-col items-center text-center 
+                  hover:scale-105 transition-transform duration-300 ease-in-out">
+        <img src="assets/Luna.jpg" 
+             alt="Luna Lovegood - Murid Ravenclaw"
+             class="w-full h-72 object-cover rounded-lg mb-4 border-2 border-yellow-500 shadow-md">
+        <h3 class="text-xl font-bold text-yellow-400 mb-2">Luna</h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Eksentrik, jujur, dan memiliki cara pandang unik terhadap dunia. 
+          Kesetiaannya membuatnya menjadi teman berharga bagi Harry dan kawan-kawan.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section Rekomendasi Buku -->
+<section id="rekomendasi" class="py-20 bg-gray-950 px-6 md:px-20">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-yellow-500 text-center mb-12">Series Terkait</h2>
+    
+    <div class="grid md:grid-cols-3 gap-10">
+      
+      <!-- Buku 1 -->
+      <div class="bg-gray-900 rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+        <img src="assets/HP2.jpg" 
+             alt="Buku 1"
+             class="rounded-lg shadow-md mb-4 w-full object-cover">
+        <h3 class="text-xl font-semibold text-white mb-2">Harry Potter and The Chamber of Secrets</h3>
+        <p class="text-yellow-400 font-bold mb-4">Rp250.000</p>
+        <a href="#preview" 
+           class="mb-2 bg-gray-700 text-white font-semibold px-6 py-2 rounded shadow hover:bg-gray-600 transition">
+          Pratinjau Buku
+        </a>
+        <a href="#beli" 
+           class="bg-yellow-500 text-black font-semibold px-6 py-2 rounded shadow hover:bg-yellow-600 transition">
+          Beli Buku
+        </a>
+      </div>
+      
+      <!-- Buku 2 -->
+      <div class="bg-gray-900 rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+        <img src="assets/HP3.jpg" 
+             alt="Buku 2"
+             class="rounded-lg shadow-md mb-4 w-full object-cover">
+        <h3 class="text-xl font-semibold text-white mb-2">Harry Potter and The Prisoner of Azkaban</h3>
+        <p class="text-yellow-400 font-bold mb-4">Rp400.000</p>
+        <a href="#preview" 
+           class="mb-2 bg-gray-700 text-white font-semibold px-6 py-2 rounded shadow hover:bg-gray-600 transition">
+          Pratinjau Buku
+        </a>
+        <a href="#beli" 
+           class="bg-yellow-500 text-black font-semibold px-6 py-2 rounded shadow hover:bg-yellow-600 transition">
+          Beli Buku
+        </a>
+      </div>
+      
+      <!-- Buku 3 -->
+      <div class="bg-gray-900 rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+        <img src="assets/HP4.jpg" 
+             alt="Buku 3"
+             class="rounded-lg shadow-md mb-4 w-full object-cover">
+        <h3 class="text-xl font-semibold text-white mb-2">Harry Potter and The Goblet of Fire</h3>
+        <p class="text-yellow-400 font-bold mb-4">Rp600.000</p>
+        <a href="#preview" 
+           class="mb-2 bg-gray-700 text-white font-semibold px-6 py-2 rounded shadow hover:bg-gray-600 transition">
+          Pratinjau Buku
+        </a>
+        <a href="#beli" 
+           class="bg-yellow-500 text-black font-semibold px-6 py-2 rounded shadow hover:bg-yellow-600 transition">
+          Beli Buku
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Testimoni --> 
+<section id="testimoni" class="bg-gradient-to-b from-black via-gray-900 to-black px-6 md:px-16 py-16">
+  <div class="max-w-7xl mx-auto">
+    <h3 class="text-4xl md:text-5xl font-extrabold text-yellow-500 text-center mb-12">
+      Testimoni
+    </h3>
+
+    <!-- Grid Testimoni -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <div class="bg-gray-800/90 p-6 rounded-xl shadow-lg hover:shadow-yellow-500/30 transition h-full">
+        <h4 class="text-lg font-bold text-yellow-400 mb-2">Charlie Puth, Los Angeles</h4>
+        <p class="text-sm text-gray-300">⭐⭐⭐⭐⭐<br>
+        <em>"Seri ini bikin saya tenggelam di dunia sihir. Jalan ceritanya penuh misteri dan bikin penasaran terus."</em></p>
+      </div>
+
+      <div class="bg-gray-800/90 p-6 rounded-xl shadow-lg hover:shadow-yellow-500/30 transition h-full">
+        <h4 class="text-lg font-bold text-yellow-400 mb-2">Diesty, Makassar</h4>
+        <p class="text-sm text-gray-300">⭐⭐⭐⭐⭐<br>
+        <em>"Karakter-karakternya hidup banget. Saya suka persahabatan Harry, Ron, dan Hermione yang selalu solid."</em></p>
+      </div>
+
+      <div class="bg-gray-800/90 p-6 rounded-xl shadow-lg hover:shadow-yellow-500/30 transition h-full">
+        <h4 class="text-lg font-bold text-yellow-400 mb-2">Nailah, Balikpapan</h4>
+        <p class="text-sm text-gray-300">⭐⭐⭐⭐<br>
+        <em>"Buku ini nggak hanya tentang sihir, tapi juga tentang keberanian melawan rasa takut. Inspiratif sekali."</em></p>
+      </div>
+
+      <div class="bg-gray-800/90 p-6 rounded-xl shadow-lg hover:shadow-yellow-500/30 transition h-full">
+        <h4 class="text-lg font-bold text-yellow-400 mb-2">Selena Gomez, Florida</h4>
+        <p class="text-sm text-gray-300">⭐⭐⭐<br>
+        <em>"Buku ini bagus untuk penggemar berat Harry Potter, tapi buat pembaca baru mungkin agak membingungkan karena banyak istilah sihir yang tidak dijelaskan."</em></p>
+      </div>
+
+      <div class="bg-gray-800/90 p-6 rounded-xl shadow-lg hover:shadow-yellow-500/30 transition h-full">
+        <h4 class="text-lg font-bold text-yellow-400 mb-2">Ariana Grande, New York</h4>
+        <p class="text-sm text-gray-300">⭐⭐⭐⭐⭐<br>
+        <em>"Setiap halaman terasa seperti petualangan baru. Sangat cocok buat yang suka fantasi dan misteri."</em></p>
+      </div>
+
+      <div class="bg-gray-800/90 p-6 rounded-xl shadow-lg hover:shadow-yellow-500/30 transition h-full">
+        <h4 class="text-lg font-bold text-yellow-400 mb-2">Angel, Papua</h4>
+        <p class="text-sm text-gray-300">⭐⭐⭐<br>
+        <em>"Alurnya menarik, tapi karakter pendukung tidak dikembangkan terlalu dalam sehingga terasa kurang hidup."</em></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Q&A Form -->
+<section id="pesan" class="py-16 text-center bg-black py-16">
+  
+  <h3 class="text-5xl font-extrabold text-yellow-500 mb-6">
+    Q&A
+  </h3>
+  <p class="text-xl text-gray-200 mb-8">
+    Ada pertanyaan seputar buku ini? Tinggalkan pesan Anda, kami siap membantu.
+  </p>
+  
+  <!-- Form -->
+  <form class="max-w-3xl mx-auto space-y-4">
+    <!-- Nama -->
+    <div>
+      <input type="text" placeholder="Nama Lengkap"
+             class="w-full border border-yellow-500/40 bg-black text-white p-3 rounded-lg 
+                    focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 
+                    placeholder-gray-400 transition" />
+    </div>
+    
+    <!-- Email -->
+    <div>
+      <input type="email" placeholder="Email"
+             class="w-full border border-yellow-500/40 bg-black text-white p-3 rounded-lg 
+                    focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 
+                    placeholder-gray-400 transition" />
+    </div>
+    
+    <!-- Pesan -->
+    <div>
+      <textarea placeholder="Pesan Anda" rows="4"
+                class="w-full border border-yellow-500/40 bg-black text-white p-3 rounded-lg 
+                       focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 
+                       placeholder-gray-400 transition"></textarea>
+    </div>
+    
+    <!-- Tombol -->
+    <button type="submit" 
+            class="w-full bg-yellow-500 text-black font-semibold px-6 py-3 rounded-lg shadow 
+                   hover:bg-yellow-600 hover:shadow-yellow-500/30 transition">
+      Kirim Pesan
+    </button>
+  </form>
+</section>
+
+
+<!-- Footer -->
+<footer class="relative text-gray-400">
+  
+  <!-- Background -->
+  <div class="absolute inset-0">
+    <img src="assets/beranda.jpg" alt="Background Buku" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/70"></div>
+  </div>
+
+  <!-- Konten Footer -->
+  <div class="relative max-w-4xl mx-auto py-10 px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      
+      <!-- Kontak -->
+      <div>
+        <h3 class="text-yellow-500 font-bold text-lg mb-4">KONTAK</h3>
+        <p>diestymendila@gmail.com</p>
+        <p>+62 812-3456-7890</p>
+        <p>Jl. Perintis Kemerdekaan 11 Makassar</p>
+      </div>
+      
+      <!-- Ikuti Kami -->
+      <div>
+        <h3 class="text-yellow-500 font-bold text-lg mb-4">IKUTI KAMI</h3>
+        <div class="flex justify-center md:justify-start space-x-4">
+          <a href="https://instagram.com/diestymendila" target="_blank" class="border border-yellow-500 text-yellow-500 px-3 py-1 rounded-full hover:bg-yellow-500 hover:text-black transition">IG</a>
+          <a href="https://pinterest.com/diestymendila" target="_blank" class="border border-yellow-500 text-yellow-500 px-3 py-1 rounded-full hover:bg-yellow-500 hover:text-black transition">P</a>
+        </div>
+      </div>
+      
+      <!-- Informasi -->
+      <div>
+        <h3 class="text-yellow-500 font-bold text-lg mb-4">INFORMASI</h3>
+        <ul class="space-y-2">
+          <li><a href="#hero" class="hover:text-yellow-500 transition">Kebijakan Privasi</a></li>
+          <li><a href="#hero" class="hover:text-yellow-500 transition">Syarat & Ketentuan</a></li>
+          <li><a href="#hero" class="hover:text-yellow-500 transition">Bantuan</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-8 pt-4 text-center text-sm">
+      <p>&copy; 2025 Harry Potter Book. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
