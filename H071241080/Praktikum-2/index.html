@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPro Academy - Mulai Karier Coding Anda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- NAVBAR -->
+    <nav class="bg-gray-900 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+
+                <a href="#home" class="text-white text-2xl font-bold tracking-wider whitespace-nowrap">
+                    TechPro Academy
+                </a>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-gray-300 hover:text-indigo-500 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Beranda</a>
+                    <a href="#about" class="text-gray-300 hover:text-indigo-500 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Tentang</a>
+                    <a href="#courses" class="text-gray-300 hover:text-indigo-500 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Layanan</a>
+                    <a href="#contact" class="text-gray-300 hover:text-indigo-500 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Kontak</a>
+                </div>
+
+                <!-- Menu Mobile (Emoji) -->
+                <div class="flex md:hidden space-x-4">
+                    <a href="#home" aria-label="Beranda" class="text-gray-300 hover:text-indigo-500 text-2xl transition transform hover:scale-110">🏠</a>
+                    <a href="#about" aria-label="Tentang" class="text-gray-300 hover:text-indigo-500 text-2xl transition transform hover:scale-110">ℹ️</a>
+                    <a href="#courses" aria-label="Layanan" class="text-gray-300 hover:text-indigo-500 text-2xl transition transform hover:scale-110">📚</a>
+                    <a href="#contact" aria-label="Kontak" class="text-gray-300 hover:text-indigo-500 text-2xl transition transform hover:scale-110">📞</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative bg-gray-900 text-white shadow-xl bg-[url('assets/cover.jpg')] bg-cover bg-center bg-no-repeat">
+        <div class="py-24 md:py-36 bg-black bg-opacity-70">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+                    Mulai Karier Coding Anda Bersama TechPro Academy
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 font-light italic">
+                    Pelatihan coding intensif dengan pendampingan mentor 1-on-1.
+                </p>
+                <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white text-lg font-bold py-3 px-8 rounded-full shadow-xl transition duration-300 transform hover:scale-105 inline-block">
+                    Daftar Sekarang
+                </a>
+                <p class="mt-4 text-sm text-gray-300">Tempat terbatas! Kelas dimulai bulan depan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Siapa Kami?</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg mb-4 leading-relaxed">
+                        TechPro Academy didirikan dengan satu misi: menjembatani kesenjangan antara teori dan industri. Kami percaya setiap orang berhak mendapatkan pelatihan coding berkualitas tinggi yang berfokus pada <strong>proyek nyata</strong> dan <strong>kebutuhan pasar kerja</strong>.
+                    </p>
+                    <p class="text-lg leading-relaxed border-l-4 border-indigo-500 pl-4 italic">
+                        "Kami tidak hanya mengajarkan kode, tetapi juga cara berpikir seperti <em>developer</em> profesional."
+                    </p>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="bg-indigo-100 p-8 rounded-lg shadow-xl text-center">
+                        <div class="bg-white p-6 rounded-xl shadow-2xl">
+                            <img 
+                                src="assets/image.jpg" 
+                                alt="Ilustrasi Belajar Coding" 
+                                class="w-full h-64 object-cover rounded-md border border-gray-200"
+                                loading="lazy"
+                            >
+                        </div>
+                        <p class="mt-4 text-sm text-gray-500">Ilustrasi: Pengembangan kode</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSES / WHY US SECTION -->
+    <section id="courses" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Mengapa Memilih Kami?</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-indigo-500">
+                    <h3 class="text-xl font-semibold mb-2">Mentor 1-on-1</h3>
+                    <p class="text-gray-600 text-sm">Dapatkan bimbingan personal dari <em>developer</em> senior untuk mengatasi setiap tantangan coding Anda.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-indigo-500">
+                    <h3 class="text-xl font-semibold mb-2">Kurikulum Berbasis Proyek</h3>
+                    <p class="text-gray-600 text-sm">Belajar sambil membangun portofolio yang dapat langsung Anda tunjukkan kepada calon perusahaan.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-indigo-500">
+                    <h3 class="text-xl font-semibold mb-2">Akses Seumur Hidup</h3>
+                    <p class="text-gray-600 text-sm">Akses materi kursus dan pembaruan selamanya. Belajar kapan saja, tanpa batas waktu.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-indigo-500">
+                    <h3 class="text-xl font-semibold mb-2">Penyaluran Kerja</h3>
+                    <p class="text-gray-600 text-sm">Jaringan industri kami membantu alumni mendapatkan peluang kerja terbaik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL SECTION -->
+    <section class="py-16 bg-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Kata Alumni Kami</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <p class="text-gray-700 italic mb-4">"Kurikulumnya sangat relevan dan mentornya sangat sabar. Saya mendapatkan pekerjaan pertama saya sebagai Frontend Developer dua bulan setelah lulus!"</p>
+                    <div class="flex items-center mt-4">
+                        <img class="w-12 h-12 rounded-full object-cover mr-4" src="assets/johndoe.jpg" alt="Foto alumni John Doe" loading="lazy">
+                        <div>
+                            <p class="font-bold">John Doe</p>
+                            <p class="text-sm text-indigo-600">Frontend Developer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <p class="text-gray-700 italic mb-4">"Akses materi seumur hidup adalah keuntungan terbaik. Saya selalu bisa kembali untuk review saat dibutuhkan. Sangat direkomendasikan, bahkan untuk pemula!"</p>
+                    <div class="flex items-center mt-4">
+                        <img class="w-12 h-12 rounded-full object-cover mr-4" src="assets/janedoe.jpg" alt="Foto alumni Jane Doe" loading="lazy">
+                        <div>
+                            <p class="font-bold">Jane Doe</p>
+                            <p class="text-sm text-indigo-600">Backend Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-16 md:py-24">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-white p-8 rounded-xl shadow-2xl">
+            
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Siap Berkarier di Dunia Teknologi?</h2>
+            <p class="text-gray-600 mb-8">Dapatkan info kurikulum lengkap dan penawaran khusus melalui email Anda.</p>
+            
+            <form action="mailto:email@techpro.com" method="POST" class="space-y-4">
+                <div>
+                    <input type="text" id="name" name="name" placeholder="Nama Lengkap" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150" required>
+                </div>
+
+                <div>
+                    <input type="email" id="email" name="email" placeholder="Email Anda" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150" required>
+                </div>
+
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.01]">
+                    Dapatkan Informasi Sekarang
+                </button>
+            </form>
+
+            <p class="text-xs text-gray-500 mt-4">Kami tidak akan pernah membagikan email Anda kepada pihak mana pun.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+
+                <div>
+                    <h3 class="text-lg font-bold mb-3">TechPro Academy</h3>
+                    <p class="text-gray-400">&copy; 2025 All rights reserved.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-3">Tautan</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-indigo-500">Kebijakan Privasi</a></li>
+                        <li><a href="#" class="hover:text-indigo-500">Syarat & Ketentuan</a></li>
+                        <li><a href="#" class="hover:text-indigo-500">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-3">Kontak Kami</h3>
+                    <p class="text-gray-400">email@techpro.com</p>
+                    <p class="text-gray-400">+62 812-345-6789</p>
+                </div>
+
+                <div class="text-left">
+                    <h3 class="font-bold text-lg mb-3">Ikuti Kami</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://facebook.com" target="_blank" class="hover:text-blue-500 transition" title="Facebook">Facebook</a></li>
+                        <li><a href="https://instagram.com" target="_blank" class="hover:text-pink-500 transition" title="Instagram">Instagram</a></li>
+                        <li><a href="https://linkedin.com" target="_blank" class="hover:text-blue-400 transition" title="LinkedIn">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
