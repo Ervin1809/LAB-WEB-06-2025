@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNO Game - Place Your Bets!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation"></div>
+    
+    <!-- Game Container -->
+    <div class="game-container">
+        
+        <!-- Betting Screen -->
+        <div id="bettingScreen" class="screen active">
+            <div class="betting-card">
+                <h1 class="game-title">🎮 UNO GAME 🎮</h1>
+                <div class="balance-display">
+                    <span class="balance-label">Saldo Anda:</span>
+                    <span class="balance-amount" id="balanceDisplay">$5000</span>
+                </div>
+                <div class="betting-input-group">
+                    <label for="betAmount">Masukkan Taruhan:</label>
+                    <input type="number" id="betAmount" min="100" step="100" placeholder="Min. $100">
+                    <p class="bet-info">Minimum: $100 | Maximum: <span id="maxBet">$5000</span></p>
+                </div>
+                <button class="btn-start" id="startGameBtn">MULAI PERMAINAN</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="screen">
+            <!-- Game Header -->
+            <div class="game-header">
+                <div class="player-info">
+                    <div class="info-card">
+                        <span class="label">Saldo:</span>
+                        <span class="value" id="currentBalance">$5000</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="label">Taruhan:</span>
+                        <span class="value" id="currentBet">$0</span>
+                    </div>
+                </div>
+                <button class="btn-quit" id="quitBtn">Keluar</button>
+            </div>
+
+            <!-- Bot Section -->
+            <div class="bot-section">
+                <div class="bot-info">
+                    <div class="bot-avatar">🤖</div>
+                    <div class="bot-details">
+                        <h3>Bot</h3>
+                        <p id="botCardCount">7 kartu</p>
+                    </div>
+                </div>
+                <div class="bot-cards" id="botCards"></div>
+                <div class="uno-notification" id="botUnoNotification">
+                    <span>🎯 UNO! 🎯</span>
+                </div>
+            </div>
+
+            <!-- Game Board -->
+            <div class="game-board">
+                <!-- Deck -->
+                <div class="deck-container">
+                    <div class="deck" id="deck">
+                        <img src="./Assets/card_back.png" alt="Deck">
+                        <span class="deck-count" id="deckCount">96</span>
+                    </div>
+                    <p class="deck-label">Draw Card</p>
+                </div>
+
+                <!-- Discard Pile -->
+                <div class="discard-container">
+                    <div class="discard-pile" id="discardPile"></div>
+                    <p class="discard-label">Kartu Teratas</p>
+                </div>
+
+                <!-- Game Status -->
+                <div class="game-status" id="gameStatus">
+                    <div class="status-message">Giliran Anda!</div>
+                    <div class="status-indicator"></div>
+                </div>
+            </div>
+
+            <!-- Player Section -->
+            <div class="player-section">
+                <div class="player-info-bar">
+                    <div class="player-avatar">👤</div>
+                    <div class="player-details">
+                        <h3>Anda</h3>
+                        <p id="playerCardCount">7 kartu</p>
+                    </div>
+                    <button class="btn-uno" id="unoBtn">
+                        <span class="uno-text">UNO!</span>
+                        <span class="uno-timer" id="unoTimer"></span>
+                    </button>
+                </div>
+                <div class="player-cards" id="playerCards"></div>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="screen">
+            <div class="game-over-card">
+                <h1 id="gameOverTitle">GAME OVER</h1>
+                <div class="game-over-content">
+                    <p id="gameOverMessage"></p>
+                    <div class="final-balance">
+                        <span>Saldo Akhir:</span>
+                        <span id="finalBalance">$0</span>
+                    </div>
+                </div>
+                <button class="btn-restart" id="restartBtn">MAIN LAGI</button>
+            </div>
+        </div>
+
+        <!-- Color Picker Modal -->
+        <div id="colorPickerModal" class="modal">
+            <div class="modal-content color-picker">
+                <h2>Pilih Warna</h2>
+                <div class="color-options">
+                    <button class="color-btn red" data-color="red">🔴 Merah</button>
+                    <button class="color-btn blue" data-color="blue">🔵 Biru</button>
+                    <button class="color-btn green" data-color="green">🟢 Hijau</button>
+                    <button class="color-btn yellow" data-color="yellow">🟡 Kuning</button>
+                </div>
+            </div>
+        </div>
+
+            <!-- Action Log -->
+        <div class="action-log minimized" id="actionLogContainer">
+        <div class="log-header" id="logToggle">
+            <span class="log-title">Log</span>
+            <span class="toggle-icon">▲</span>
+        </div>
+        <div class="log-content" id="actionLog"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
