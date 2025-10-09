@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNO Card Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="betting-modal" class="modal active">
+            <div class="modal-content">
+                <h2>Place Your Bet</h2>
+                <p>Your current balance: $<span id="current-balance-display">5000</span></p>
+                <input type="number" id="bet-amount" min="100" value="100">
+                <button id="start-round-btn">Start Round</button>
+            </div>
+        </div>
+        <div id="game-over-modal" class="modal">
+            <div class="modal-content">
+                <h2>Game Over</h2>
+                <p>Your balance has run out.</p>
+                <button id="restart-game-btn">Play Again</button>
+            </div>
+        </div>
+
+        <div id="game-area">
+            <div id="bot-hand" class="hand-area">
+            </div>
+
+            <div id="center-area">
+                <div id="deck-pile">
+                    <div class="card back" id="deck"></div>
+                </div>
+                <div id="discard-pile">
+                </div>
+                <div id="game-status">
+                    <p id="status-message">Place your bet to start the game.</p>
+                </div>
+            </div>
+
+            <div id="player-area">
+                <div id="player-hand" class="hand-area">
+                </div>
+                <div id="player-controls">
+                    <div class="balance-display">
+                        Balance: $<span id="player-balance">5000</span>
+                    </div>
+                    </div>
+            </div>
+        </div>
+
+        <div id="color-picker-modal" class="modal">
+            <div class="modal-content">
+                <h3>Choose a color:</h3>
+                <div class="color-options">
+                    <button class="color-btn red" data-color="red"></button>
+                    <button class="color-btn yellow" data-color="yellow"></button>
+                    <button class="color-btn green" data-color="green"></button>
+                    <button class="color-btn blue" data-color="blue"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="pass-turn-btn" disabled>Pass</button>
+            <button id="call-uno-btn" disabled>Call UNO</button>
+            <button id="uno-button" disabled>UNO</button>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+html {
+    font-size: 16px; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #56acdf;
+    color: #dae6ec;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#game-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.hand-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bot-hand {
+    height: 25%;
+}
+
+#center-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    flex-grow: 1;
+    min-height: 0;
+}
+
+#player-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 35%;
+    gap: 1rem;
+}
+
+.card, #deck-pile, #discard-pile {
+    height: 7.5rem;
+    width: 5rem;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 7px rgba(21, 96, 107, 0.3);
+    cursor: pointer;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.card.back {
+    background-image: url('asset/back.png');
+    background-size: cover;
+}
+
+#bot-hand .card {
+    margin-left: -4rem;
+}
+#bot-hand .card:first-child { margin-left: 0; }
+
+#player-hand .card {
+    margin-left: -2.8rem;
+    transition: transform 0.2s ease-out;
+}
+#player-hand .card:first-child { margin-left: 0; }
+
+#player-hand .card:hover {
+    transform: translateY(-1.8rem);
+    z-index: 100;
+}
+
+#player-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.balance-display {
+    background: rgba(29, 107, 110, 0.3);
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.625rem;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+#uno-button, #pass-turn-btn, #call-uno-btn {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: rgb(206, 233, 246);
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+#uno-button:disabled, #pass-turn-btn:disabled, #call-uno-btn:disabled { 
+    background-color: #5b8287; 
+    cursor: not-allowed; 
+}
+
+#uno-button {
+    background-color: #ff5555;
+}
+
+#pass-turn-btn {
+    background-color: #5555ff;
+}
+
+#call-uno-btn {
+    background-color: #ffaa00;
+}
+
+#game-status {
+    text-align: center;
+    font-size: 1.125rem;
+    min-width: 15.625rem;
+}
+
+.modal {
+    display: none; position: fixed; z-index: 200;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center; align-items: center;
+}
+.modal.active { display: flex; }
+
+.modal-content {
+    background-color: #1e3a5f; border: 2px solid white;
+    padding: 1.875rem; border-radius: 0.625rem;
+    text-align: center; width: 90%; max-width: 25rem;
+}
+.modal-content h2 { font-size: 1.5rem; margin-top: 0; }
+.modal-content input, .modal-content button {
+    display: block; width: 100%;
+    padding: 0.625rem; margin-top: 0.9375rem;
+    border-radius: 0.3125rem; border: none; font-size: 1rem;
+    box-sizing: border-box;
+}
+.modal-content button { background-color: #55aa55; color: white; cursor: pointer; }
+
+#color-picker-modal .color-options {
+    display: flex; justify-content: center;
+    gap: 0.625rem; margin-top: 1.25rem;
+}
+.color-btn {
+    width: 3.75rem; height: 3.75rem;
+    border-radius: 50%; border: 3px solid white;
+    cursor: pointer; transition: transform 0.2s;
+}
+.color-btn.red { background-color: #ff5555; }
+.color-btn.yellow { background-color: #ffaa00; }
+.color-btn.green { background-color: #55aa55; }
+.color-btn.blue { background-color: #5555ff; }
+.color-btn:hover { transform: scale(1.1); }
+
+@media (min-width: 768px) {
+    #player-area {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    #player-controls {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .button-group {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        z-index: 210;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .balance-display {
+        background: rgba(0,0,0,0.3);
+        padding: 0.625rem 1.25rem;
+        border-radius: 0.625rem;
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    #player-hand {
+        justify-content: flex-end;
+    }
+}
