@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNO Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="loading-screen">
+      <img src="assets/uno!.png" alt="Loading Logo" />
+    </div>
+    <div id="game-container">
+      <div id="game-info">
+        <div id="balance-info">
+          Saldo Anda: <span id="player-balance">$5000</span>
+        </div>
+
+        <div id="betting-controls">
+          <input type="number" id="bet-amount" min="100" value="100" />
+          <button id="play-button">MAIN!</button>
+        </div>
+
+        <div id="status-message">Masukkan taruhan dan tekan MAIN!</div>
+      </div>
+
+      <div id="game-board">
+        <div id="bot-hand" class="hand"></div>
+
+        <div id="turn-indicator">
+          <span id="player-turn">Your Turn</span>
+          <span id="bot-turn">Bot's Turn</span>
+        </div>
+
+        <div id="center-area">
+          <div id="deck-pile">
+            <img src="assets/back.png" alt="Deck" id="deck-card" />
+            <div id="color-selector" class="hidden">
+              <button class="color-btn" data-color="red" style="background-color: #ff5555"></button>
+              <button class="color-btn" data-color="green" style="background-color: #55aa55"></button>
+              <button class="color-btn" data-color="blue" style="background-color: #5555ff"></button>
+              <button class="color-btn" data-color="yellow" style="background-color: #ffaa00"></button>
+            </div>
+          </div>
+          <div id="discard-pile"></div>
+        </div>
+
+        <div id="player-hand" class="hand"></div>
+        <button id="uno-button" class="hidden">UNO!</button>
+      </div>
+    </div>
+
+    <div id="win-screen" class="hidden">
+      <img src="assets/YOUWIN.PNG" alt="You Win!" class="win-message-img" />
+      <div id="coin-animation-container"></div>
+    </div>
+
+    <div id="game-over-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Game Over</h2>
+        <p>Saldo Anda habis! Coba lagi dari awal.</p>
+        <button id="restart-game-btn">Mulai Ulang</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
