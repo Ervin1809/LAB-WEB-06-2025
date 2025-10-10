@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNO Game with Betting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>UNO Game</h1>
+        <div class="balance-display">
+            <h2>Your Balance: $<span id="player-balance">5000</span></h2>
+        </div>
+    </div>
+
+    <div class="game-board">
+        <div class="hand-container">
+            <h2>Computer's Hand</h2>
+            <div id="computer-hand" class="hand"></div>
+        </div>
+
+        <div class="deck-area">
+            <div id="deck" class="card back" title="Click to draw a card"></div>
+            <div id="discard-pile" class="card"></div>
+        </div>
+
+        <div class="hand-container">
+            <h2>Your Hand</h2>
+            <div id="player-hand" class="hand"></div>
+        </div>
+    </div>
+
+    <div id="betting-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="betting-title">Place Your Bet</h2>
+            <p>Min bet: $1000, Max bet: $5000</p>
+            <input type="number" id="bet-amount" min="1000" max="5000" step="100" placeholder="Enter bet amount">
+            <button id="place-bet-btn">Place Bet & Start</button>
+            <p id="bet-message"></p>
+        </div>
+    </div>
+
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="winner-message"></h2>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+
+    <div id="color-picker-modal" class="modal">
+        <div class="modal-content">
+            <h2>Choose Next Color</h2>
+            <div class="color-choices">
+                <button class="color-btn" data-color="red" style="background-color: #ff5555;"></button>
+                <button class="color-btn" data-color="green" style="background-color: #55aa55;"></button>
+                <button class="color-btn" data-color="blue" style="background-color: #5555ff;"></button>
+                <button class="color-btn" data-color="yellow" style="background-color: #ffaa00;"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
