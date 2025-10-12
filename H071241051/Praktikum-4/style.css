@@ -1,0 +1,185 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0c4b2c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.balance-display {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    border: 2px solid #fff;
+}
+
+.game-board {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    align-items: center;
+}
+
+.hand-container {
+    width: 100%;
+    min-height: 160px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.hand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 140px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 3px 3px 7px rgba(0,0,0,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#player-hand .card {
+    cursor: pointer;
+}
+
+#player-hand .card:hover {
+    transform: translateY(-20px) scale(1.05);
+    box-shadow: 5px 25px 15px rgba(0,0,0,0.3);
+}
+
+.deck-area {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#deck {
+    cursor: pointer;
+}
+
+#deck:hover {
+    transform: scale(1.05);
+}
+
+.back {
+    background-image: url('assets/card_back.png');
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    color: #333;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.modal-content input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+.modal-content button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+#bet-message {
+    color: red;
+    margin-top: 10px;
+    height: 20px;
+}
+
+#play-again-btn {
+    background-color: #008CBA;
+}
+#play-again-btn:hover {
+    background-color: #007B9A;
+}
+
+/* Style untuk pilihan warna */
+.color-choices { 
+    display: flex; 
+    justify-content: space-around; 
+    padding: 20px 0; 
+}
+.color-btn { 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    border: 3px solid #fff; 
+    cursor: pointer; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
+    transition: transform 0.2s; 
+}
+.color-btn:hover { 
+    transform: scale(1.1); 
+}
