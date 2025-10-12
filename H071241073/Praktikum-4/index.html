@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UNO Sederhana</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="notification" id="notification"></div>
+  <div class="overlay-full" id="overlayFull">
+    <div class="box" id="overlayBox"></div> 
+  </div>
+
+  <!-- Wild Overlay -->
+  <div class="overlay-wild" id="wildOverlay">
+    <div class="wild-box">
+      <h3>Pilih warna kartu</h3>
+      <div class="wild-buttons">
+        <button class="wild-red" onclick="pilihWarnaWild('red')">Merah</button>
+        <button class="wild-blue" onclick="pilihWarnaWild('blue')">Biru</button>
+        <button class="wild-green" onclick="pilihWarnaWild('green')">Hijau</button>
+        <button class="wild-yellow" onclick="pilihWarnaWild('yellow')">Kuning</button>
+      </div>
+      <div class="wild-hint">Klik warna untuk melanjutkan giliran</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="main">
+      <h1>UNO-!!</h1>
+      <div class="hand-label">Bot (<span id="botCount">0</span>)</div>
+      <div class="hand" id="botHand"></div>
+
+      <div class="center">
+        <div class="pile">
+          <div class="pile-title">Kartu Teratas</div>
+          <div id="topCard"></div>
+          <div class="color-info">
+            <div class="active-color" id="activeColor"></div>
+            <div class="color-text">Warna aktif</div>
+          </div>
+        </div>
+        <div class="pile">
+          <div class="pile-title">Deck</div>
+          <img id="deck" class="card-img" src="img/card_back.png" alt="deck">
+        </div>
+      </div>
+
+      <div class="hand-label">Anda (<span id="playerCount">0</span>)</div>
+      <div class="hand" id="playerHand"></div>
+    </div>
+
+    <div class="sidebar">
+      <div class="saldo">
+        <span>Saldo: </span><span id="balance">$5000</span>
+      </div>
+
+      <label for="bet">Taruhan (min $100)</label>
+      <input id="bet" type="number" value="100" min="100" />
+
+      <button id="startRound" class="btn-main">Mulai Ronde</button>
+
+      <div class="button-row">
+        <button id="unoBtn" class="btn-disabled" disabled>!UNO</button>
+        <button id="callUnoBtn" class="btn-disabled" disabled>Panggil UNO</button>
+      </div>
+
+      <button id="skipBtn" class="btn-disabled" disabled>Lewati Giliran</button>
+
+      <hr />
+
+      <div class="log-title">Log (status saat ini)</div>
+      <div id="log" class="log"></div>
+      <div class="log-hint">Semua aksi/status ditampilkan di sini (1 pesan terbaru).</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
