@@ -1,167 +1,116 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
+-- MySQL dump 10.13  Distrib 8.4.3, for Win64 (x86_64)
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 16 Okt 2025 pada 19.30
--- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.2.12
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
+-- Host: localhost    Database: db_manajemen_proyek
+-- ------------------------------------------------------
+-- Server version	8.4.3
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Database: `db_manajemen_proyek`
+-- Table structure for table `projects`
 --
 
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `projects`
---
-
+DROP TABLE IF EXISTS `projects`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `projects` (
-  `id` int(11) NOT NULL,
-  `nama_proyek` varchar(100) NOT NULL,
-  `deskripsi` text DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nama_proyek` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `deskripsi` text COLLATE utf8mb4_general_ci,
   `tanggal_mulai` date DEFAULT NULL,
   `tanggal_selesai` date DEFAULT NULL,
-  `manager_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `manager_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_projects_manager` (`manager_id`),
+  CONSTRAINT `fk_projects_manager` FOREIGN KEY (`manager_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data untuk tabel `projects`
+-- Dumping data for table `projects`
 --
 
-INSERT INTO `projects` (`id`, `nama_proyek`, `deskripsi`, `tanggal_mulai`, `tanggal_selesai`, `manager_id`) VALUES
-(1, 'Test', 'ajnwdoawibda', '2025-10-02', '2025-10-18', 3);
-
--- --------------------------------------------------------
+LOCK TABLES `projects` WRITE;
+/*!40000 ALTER TABLE `projects` DISABLE KEYS */;
+/*!40000 ALTER TABLE `projects` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
--- Struktur dari tabel `tasks`
+-- Table structure for table `tasks`
 --
 
+DROP TABLE IF EXISTS `tasks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tasks` (
-  `id` int(11) NOT NULL,
-  `nama_tugas` varchar(100) NOT NULL,
-  `deskripsi` text DEFAULT NULL,
-  `status` varchar(100) NOT NULL DEFAULT 'belum',
-  `project_id` int(11) NOT NULL,
-  `assigned_to` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nama_tugas` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `deskripsi` text COLLATE utf8mb4_general_ci,
+  `status` varchar(100) COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'belum',
+  `project_id` int NOT NULL,
+  `assigned_to` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_tasks_project` (`project_id`),
+  KEY `fk_tasks_assigned` (`assigned_to`),
+  CONSTRAINT `fk_tasks_assigned` FOREIGN KEY (`assigned_to`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `fk_tasks_project` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data untuk tabel `tasks`
+-- Dumping data for table `tasks`
 --
 
-INSERT INTO `tasks` (`id`, `nama_tugas`, `deskripsi`, `status`, `project_id`, `assigned_to`) VALUES
-(1, 'pertama', 'menyelesaikan project', 'proses', 1, 3);
-
--- --------------------------------------------------------
+LOCK TABLES `tasks` WRITE;
+/*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `role` varchar(100) NOT NULL,
-  `project_manager_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `role` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `project_manager_id` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_users_pm` (`project_manager_id`),
+  CONSTRAINT `fk_users_pm` FOREIGN KEY (`project_manager_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `role`, `project_manager_id`) VALUES
-(1, 'superadmin', '$2y$10$joxkvz3NiydZLs7yEd0CmuxSq3BrnFYqYgf6vw/4VLiOhDocRWKd6', 'super_admin', NULL),
-(2, 'pm_andi', '$2y$10$JI9iEVVBCFmDzSE6nlL75.m82JVH2jOa6WzU5eWoPwjP5oA.WsVca', 'project_manager', NULL),
-(3, 'pm_budi', '$2y$10$f4lR/pc5vXaD9Xqe1YePderd6vS4o4xTy7ZOfH2dDwxGyKwvQNXeW', 'project_manager', NULL),
-(4, 'tm_siti', '$2y$10$35hqhgCZWnGJyKhhyBMD5.fXGkQug3X.NLH7ExNsTs89agEHxxhEm', 'team_member', NULL),
-(5, 'tm_rani', '$2y$10$Ukn/f5Lhkjcoan/5AT45tegAFCZli5IYwapYPDiYWr4FfUI3Mbw8.', 'team_member', NULL);
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'superadmin','$2y$10$joxkvz3NiydZLs7yEd0CmuxSq3BrnFYqYgf6vw/4VLiOhDocRWKd6','super_admin',NULL),(2,'pm_andi','$2y$10$JI9iEVVBCFmDzSE6nlL75.m82JVH2jOa6WzU5eWoPwjP5oA.WsVca','project_manager',NULL),(3,'pm_budi','$2y$10$f4lR/pc5vXaD9Xqe1YePderd6vS4o4xTy7ZOfH2dDwxGyKwvQNXeW','project_manager',NULL),(4,'tm_siti','$2y$10$35hqhgCZWnGJyKhhyBMD5.fXGkQug3X.NLH7ExNsTs89agEHxxhEm','team_member',NULL),(6,'iyad','$2y$10$arfMKpH6cENluT1aNsxonOrhQ9hW/4c.v0d81bI5u9zjeZ4FUZvjO','team_member',2),(7,'ervin','$2y$10$098YKI/1gZQskJfiPGCepu/oF1bEmmL3yBxqkbz4mBB1Lw0h/cJum','team_member',2);
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
---
--- Indexes for dumped tables
---
-
---
--- Indeks untuk tabel `projects`
---
-ALTER TABLE `projects`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_projects_manager` (`manager_id`);
-
---
--- Indeks untuk tabel `tasks`
---
-ALTER TABLE `tasks`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_tasks_project` (`project_id`),
-  ADD KEY `fk_tasks_assigned` (`assigned_to`);
-
---
--- Indeks untuk tabel `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_users_pm` (`project_manager_id`);
-
---
--- AUTO_INCREMENT untuk tabel yang dibuang
---
-
---
--- AUTO_INCREMENT untuk tabel `projects`
---
-ALTER TABLE `projects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT untuk tabel `tasks`
---
-ALTER TABLE `tasks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT untuk tabel `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
---
-
---
--- Ketidakleluasaan untuk tabel `projects`
---
-ALTER TABLE `projects`
-  ADD CONSTRAINT `fk_projects_manager` FOREIGN KEY (`manager_id`) REFERENCES `users` (`id`);
-
---
--- Ketidakleluasaan untuk tabel `tasks`
---
-ALTER TABLE `tasks`
-  ADD CONSTRAINT `fk_tasks_assigned` FOREIGN KEY (`assigned_to`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `fk_tasks_project` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`);
-
---
--- Ketidakleluasaan untuk tabel `users`
---
-ALTER TABLE `users`
-  ADD CONSTRAINT `fk_users_pm` FOREIGN KEY (`project_manager_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
-COMMIT;
-
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2025-10-21 14:19:20
