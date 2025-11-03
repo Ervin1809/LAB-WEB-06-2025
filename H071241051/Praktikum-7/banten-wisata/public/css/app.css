@@ -1,0 +1,811 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+/* Reset dasar */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; /* Font baru diterapkan */
+    color: #333;
+}
+
+/* Styling Video Latar Belakang (Halaman Biasa) */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan video menutupi layar */
+    filter: brightness(0.4); /* Meredupkan video agar teks terbaca */
+}
+
+/* Konten Utama (Halaman Biasa) */
+.content {
+    position: relative;
+    z-index: 5;
+    max-width: 900px;
+    /* Margin atas diubah jadi 120px untuk memberi ruang bagi nav baru */
+    margin: 120px auto 40px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.content h2 { /* Style H2 default untuk content */
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+    /* Margin bottom default bisa ditambahkan jika perlu */
+     margin-bottom: 20px;
+}
+
+/* Footer (Halaman Biasa) */
+footer {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    margin-top: 40px;
+}
+
+/* Styling untuk Card (Komponen) */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff; /* Default background putih untuk card */
+    color: #333; /* Default warna teks hitam untuk card */
+}
+
+.card img {
+    width: 100%;
+    height: 180px; /* Tinggi default gambar card */
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    color: #003366; /* Warna judul card */
+}
+
+.card-content p {
+    color: #555; /* Warna teks deskripsi card */
+}
+
+
+/* Styling Galeri */
+/* Style .gallery lama dihapus */
+
+/* Styling Form Kontak */
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box; /* Agar padding tidak merusak layout */
+    border: 1px solid #ccc; /* Border default */
+    border-radius: 4px;
+}
+
+/* Styling untuk Kontainer Peta */
+#map-container {
+    height: 400px; /* Atur tinggi peta */
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    z-index: 1; /* Memastikan peta tampil di atas elemen lain */
+}
+
+
+/* ======================================= */
+/* === STYLE KHUSUS LANDING PAGE (HOME) === */
+/* ======================================= */
+
+.landing-container {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    height: 100vh;
+    background: none;
+    box-shadow: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Video Background */
+.landing-video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#landing-bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay Konten */
+.landing-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.45); /* Sedikit lebih gelap agar teks lebih kontras */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Top, Middle, Bottom */
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 1. Bagian Atas: Logo */
+.landing-top {
+    /* Dibiarkan kosong agar logo tetap di atas */
+}
+
+.landing-logo {
+    width: 150px; /* Logo diperbesar */
+    height: auto;
+}
+
+/* 2. Bagian Tengah: Tagline */
+.landing-middle {
+    flex-grow: 1; /* Mengisi ruang tengah */
+    display: flex;
+    align-items: center; /* Vertikal tengah */
+    justify-content: center; /* Horizontal tengah */
+}
+
+.landing-tagline {
+    font-size: 3.5rem; /* Ukuran besar untuk tagline */
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+/* 3. Bagian Bawah: "JELAJAHI" + Link Navigasi */
+.landing-bottom-content {
+    /* Ditempatkan di bawah oleh flex space-between */
+}
+
+.explore-title-bottom {
+    font-size: 2rem; /* Judul "JELAJAHI" yang baru */
+    font-weight: 700;
+    letter-spacing: 8px; /* Jarak antar huruf */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.landing-nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* Jarak ditambah */
+    flex-wrap: wrap;
+}
+
+/* Style Link Navigasi (Tanpa Box) */
+.nav-link-item {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-link-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 5px; /* Beri ruang untuk garis bawah */
+    border-bottom: 2px solid transparent; /* Garis bawah transparan (untuk jaga spasi) */
+    transition: all 0.3s ease; /* Transisi halus */
+}
+
+/* Efek Hover (sesuai permintaan) */
+.nav-link-item:hover {
+    transform: translateY(-5px); /* Sedikit terangkat */
+}
+
+.nav-link-item:hover h3 {
+    border-color: white; /* Munculkan garis bawah */
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8); /* Efek glow pada H3 */
+}
+
+/* ======================================= */
+/* === STYLE NAVIGASI GLOBAL (BARU) === */
+/* ======================================= */
+/* Ini adalah style untuk nav di master.blade.php */
+.dest-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.dest-nav-logo img {
+    width: 100px;
+    height: auto;
+    filter: brightness(0) invert(1); /* Membuat logo jadi putih (default) */
+}
+
+/* Wrapper baru untuk ikon kanan */
+.nav-icons-right {
+    display: flex; /* Sejajarkan ikon home & hamburger */
+    align-items: center;
+}
+
+.dest-nav-home a {
+    color: white; /* Warna ikon home putih (default) */
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    transition: color 0.3s ease;
+    margin-right: 20px; /* Jarak antara home & hamburger */
+}
+.dest-nav-home a:hover {
+    color: #ddd;
+}
+
+/* Style Hamburger Menu */
+.hamburger-menu {
+    position: relative; /* Agar dropdown bisa diposisikan relatif */
+}
+
+.hamburger-icon {
+    font-size: 1.8rem; /* Samakan ukuran dengan ikon home */
+    color: white; /* Warna default putih */
+    cursor: pointer;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    transition: color 0.3s ease;
+}
+
+.hamburger-icon:hover {
+    color: #ddd;
+}
+
+.dropdown-menu {
+    display: none; /* Sembunyikan default */
+    position: absolute;
+    top: 100%; /* Muncul tepat di bawah ikon */
+    right: 0; /* Rata kanan */
+    background-color: rgba(0, 0, 0, 0.85); /* Background gelap transparan */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    z-index: 101; /* Di atas elemen lain */
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Tampilkan dropdown saat hamburger di-hover */
+.hamburger-menu:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* ======================================= */
+/* === STYLE KHUSUS HALAMAN DESTINASI === */
+/* ======================================= */
+
+/* 1. Container Utama Halaman */
+.destination-container {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    background: #ffffff; /* Latar belakang dasar putih */
+    box-shadow: none;
+    color: #333; /* Teks default hitam */
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* 2. Navigasi Pojok (Style sudah ada di global) */
+
+/* 3. Grid Gambar Full-screen */
+.dest-image-grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 kolom */
+    height: 100vh; /* Setinggi layar */
+    width: 100%;
+}
+
+.dest-grid-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dest-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: brightness(0.6); /* Agak gelap */
+}
+
+.dest-grid-item:hover img {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+/* Teks Judul di atas gambar (DIKEMBALIKAN) */
+.dest-grid-item h2 {
+    position: absolute;
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    z-index: 10;
+    margin: 0;
+}
+
+
+/* 4. Bagian Caption/Deskripsi */
+.dest-caption-section {
+    padding: 80px 40px;
+    background: #ffffff;
+}
+
+.dest-caption-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 kolom */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dest-caption-item {
+    text-align: center; /* MEMBUAT TEKS KE TENGAH */
+}
+.dest-caption-item h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #003366;
+}
+.dest-caption-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* 6. Bagian Peta */
+.dest-map-section {
+    background: #f9f9f9;
+}
+.dest-map-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+#dest-map-container {
+    height: 500px;
+    width: 100%;
+}
+
+/* Style Footer Khusus Halaman Destinasi (DIHAPUS SEMUA) */
+
+
+/* ======================================= */
+/* === STYLE KHUSUS HALAMAN KONTAK === */
+/* ======================================= */
+
+/* 1. Sembunyikan video background default di hal. kontak */
+body#page-contact .video-background {
+    display: none;
+}
+
+/* 2. Atur background body putih (setelah menghapus gambar) */
+body#page-contact {
+    background: #ffffff;
+}
+
+/* 3. Style .content box (kembali ke default) */
+body#page-contact .content {
+    background-color: rgba(255, 255, 255, 0.9); /* Background putih transparan */
+    color: #333; /* Warna teks hitam */
+    border: 1px solid #ddd; /* Border abu */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 4. Style h2 di dalam .content (kembali ke default, HAPUS GARIS BAWAH) */
+body#page-contact .content h2 {
+    color: #333;
+    border-bottom: none; /* Hapus border */
+    padding-bottom: 0; /* Hapus padding bawah */
+    margin-bottom: 20px; /* Jaga margin bawah */
+}
+
+/* 5. Style Peta (kembali ke default) */
+body#page-contact #map-container {
+    border: none; /* Hapus border */
+}
+
+/* 6. Style Form (kembali ke default) */
+body#page-contact .form-group label {
+    color: #333; /* Warna label hitam */
+}
+
+body#page-contact .form-group input,
+body#page-contact .form-group textarea {
+    background-color: #fff; /* Background putih */
+    border-color: #ccc; /* Border abu */
+    color: #333; /* Warna teks hitam */
+}
+
+/* Style untuk placeholder text (kembali ke default) */
+body#page-contact .form-group input::placeholder,
+body#page-contact .form-group textarea::placeholder {
+    color: #999; /* Warna placeholder abu */
+}
+
+/* 7. Ubah warna ikon navigasi jadi hitam */
+body#page-contact .dest-nav-logo img {
+    filter: none; /* Hapus filter invert agar logo hitam */
+}
+
+body#page-contact .dest-nav-home a,
+body#page-contact .hamburger-icon { /* Target home dan hamburger */
+    color: #333; /* Warna ikon hitam */
+    text-shadow: none; /* Hapus shadow */
+}
+body#page-contact .dest-nav-home a:hover,
+body#page-contact .hamburger-icon:hover { /* Target hover */
+    color: #000; /* Warna hover hitam pekat */
+}
+
+/* 8. Style dropdown menu di halaman kontak (agar kontras) */
+body#page-contact .dropdown-menu {
+    background-color: #ffffff; /* Background putih */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1); /* Shadow lebih halus */
+}
+body#page-contact .dropdown-menu a {
+    color: #333; /* Teks hitam */
+}
+body#page-contact .dropdown-menu a:hover {
+    background-color: #f1f1f1; /* Hover abu-abu muda */
+}
+
+
+/* ======================================= */
+/* === STYLE KHUSUS HALAMAN KULINER (CAROUSEL) === */
+/* ======================================= */
+
+/* 1. Sembunyikan video background default */
+body#page-kuliner .video-background {
+    display: none;
+}
+
+/* 2. Pastikan background body putih */
+body#page-kuliner {
+    background: #ffffff;
+}
+
+/* 3. Atur area .content agar full-width */
+body#page-kuliner .content {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    max-width: 100%; /* Full width */
+    color: #333;
+    padding: 0; /* Hapus padding default */
+    margin-top: 120px; /* Jaga jarak dari nav */
+    margin-bottom: 40px;
+}
+
+/* 4. Style judul utama (HAPUS GARIS BAWAH) */
+body#page-kuliner .content h2 { /* Target H2 spesifik */
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    padding-top: 30px; /* Jaga jarak atas */
+    border-bottom: none; /* Hapus border biru */
+    padding-bottom: 0; /* Hapus padding bawah */
+}
+
+/* 5. Style container carousel */
+.kuliner-carousel-container {
+    overflow-x: auto; /* Aktifkan scroll horizontal */
+    padding: 0 40px 30px 40px; /* Beri padding samping & bawah */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+/* Sembunyikan scrollbar untuk Chrome, Safari, Opera */
+.kuliner-carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* 6. Style track (penampung card) */
+.kuliner-carousel-track {
+    display: flex; /* Jejerkan card */
+    gap: 30px; /* Jarak antar card */
+    width: max-content; /* Pastikan track tidak wrap */
+}
+
+/* 7. Style item/card di dalam carousel (LEBAR DIPERBAIKI) */
+body#page-kuliner .kuliner-carousel-item.card {
+    width: 280px; /* Lebar card diperbaiki */
+    flex-shrink: 0;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style GAMBAR di dalam card carousel (TINGGI DIPERBAIKI) */
+body#page-kuliner .kuliner-carousel-item.card img {
+    height: 180px; /* Tinggi gambar diperbaiki */
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.kuliner-carousel-item .card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.kuliner-carousel-item .card-content h3 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.kuliner-carousel-item .card-content p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* 8. Ubah warna ikon navigasi jadi hitam (karena background putih) */
+body#page-kuliner .dest-nav-logo img {
+    filter: none; /* Logo jadi hitam */
+}
+
+body#page-kuliner .dest-nav-home a,
+body#page-kuliner .hamburger-icon {
+    color: #333; /* Ikon jadi hitam */
+    text-shadow: none;
+}
+body#page-kuliner .dest-nav-home a:hover,
+body#page-kuliner .hamburger-icon:hover {
+    color: #000;
+}
+
+/* Style dropdown menu di halaman kuliner (agar kontras) */
+body#page-kuliner .dropdown-menu {
+    background-color: #ffffff; /* Background putih */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+}
+body#page-kuliner .dropdown-menu a {
+    color: #333; /* Teks hitam */
+}
+body#page-kuliner .dropdown-menu a:hover {
+    background-color: #f1f1f1; /* Hover abu-abu muda */
+}
+
+
+/* ======================================= */
+/* === STYLE KHUSUS HALAMAN GALERI (REVISI) === */
+/* ======================================= */
+
+/* 1. Sembunyikan video background default */
+body#page-gallery-page .video-background {
+    display: none;
+}
+
+/* 2. Atur background body hitam */
+body#page-gallery-page {
+    background: #000000;
+}
+
+/* 3. Style container utama (menggantikan .content) */
+/* Container ini sekarang hanya mengatur padding atas/bawah */
+body#page-gallery-page .gallery-container {
+    padding-top: 120px; /* Jarak dari nav */
+    padding-bottom: 40px;
+}
+
+/* 4. Style untuk setiap gambar (DIUBAH) */
+.gallery-image {
+    display: block; /* Agar margin auto berfungsi */
+    max-width: 700px; /* Batasi lebar maksimal gambar */
+    width: 90%; /* Lebar relatif terhadap container, tapi dibatasi max-width */
+    height: auto;
+    margin-left: auto; /* Tengahkan gambar */
+    margin-right: auto; /* Tengahkan gambar */
+    margin-bottom: 30px; /* Jarak antar gambar dikurangi */
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+/* 5. Style untuk Animasi Scroll (DIHAPUS) */
+/* .scroll-animate { ... } */
+/* .scroll-animate.visible { ... } */
+
+/* 6. Pastikan ikon navigasi berwarna putih */
+body#page-gallery-page .dest-nav-logo img {
+    filter: brightness(0) invert(1); /* Logo putih */
+}
+
+body#page-gallery-page .dest-nav-home a,
+body#page-gallery-page .hamburger-icon {
+    color: white; /* Ikon putih */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+body#page-gallery-page .dest-nav-home a:hover,
+body#page-gallery-page .hamburger-icon:hover {
+    color: #ddd;
+}
+body#page-gallery-page .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+body#page-gallery-page .dropdown-menu a {
+    color: white;
+}
+body#page-gallery-page .dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* ======================================= */
+/* === STYLE VALIDASI FORM KONTAK === */
+/* ======================================= */
+
+/* Style untuk teks error di bawah input */
+body#page-contact .error-text {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Style untuk border input yang salah */
+body#page-contact .error-input {
+    border-color: #ff6b6b !important; /* !important untuk menimpa style lain */
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
+
+/* Style untuk pesan status form (sukses) */
+#form-message.success {
+    color: #1a6e3a; /* Warna hijau lebih gelap agar kontras di putih */
+    background-color: #d1e7dd; /* Background hijau muda */
+    border: 1px solid #a3cfbb; /* Border hijau */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Style untuk pesan status form (gagal) */
+#form-message.error {
+    color: #ff6b6b;
+    background-color: rgba(255, 107, 107, 0.1);
+    border: 1px solid #ff6b6b;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+/* ======================================= */
+/* === PENYESUAIAN MOBILE === */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    .dest-image-grid-section {
+        grid-template-columns: 1fr; /* Ubah jadi 1 kolom */
+        height: auto; /* Tinggi otomatis */
+    }
+    .dest-grid-item {
+        height: 300px; /* Beri tinggi tetap per gambar */
+    }
+    .dest-caption-grid {
+        grid-template-columns: 1fr; /* 1 kolom */
+    }
+
+    .dest-nav {
+        padding: 20px;
+    }
+    .dest-nav-logo img {
+        width: 80px;
+    }
+    .dest-nav-home a {
+        font-size: 1.5rem;
+    }
+    .hamburger-icon {
+       font-size: 1.5rem; /* Samakan ukuran hamburger */
+    }
+    .nav-icons-right {
+        gap: 15px; /* Kurangi jarak ikon di mobile */
+    }
+    .dest-nav-home a {
+        margin-right: 0; /* Hapus margin kanan home */
+    }
+
+
+    /* Style Footer Khusus Destinasi dihapus dari mobile */
+
+
+    /* Penyesuaian mobile untuk halaman kuliner */
+    body#page-kuliner .content {
+        max-width: 100%; /* Tetap full-width */
+        margin-top: 100px;
+    }
+    .kuliner-carousel-container {
+        padding: 0 15px 30px 15px; /* Kurangi padding samping di HP */
+    }
+    /* Lebar card kuliner di HP tetap 280px */
+    .kuliner-carousel-item.card {
+        width: 280px;
+    }
+
+    /* Penyesuaian mobile untuk halaman galeri */
+    .gallery-image {
+        max-width: 90%; /* Gambar lebih lebar di HP */
+        margin-bottom: 40px; /* Jarak antar gambar */
+    }
+
+}
